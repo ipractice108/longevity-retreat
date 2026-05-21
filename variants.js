@@ -13,7 +13,7 @@ window.NUANU_VARIANTS = {
     heroAlt: "Dawn light on a terrace at Nuanu Creative City. A single fifty-five-year-old man in linen walks away from the camera toward a palm-shaded path. Wide angle, depth, no other figures.",
     heroCaption: "hero · dawn · terrace · figure walking · palm path",
     heroPalette: ["#2c382c", "#5b6049", "#a18960", "#dec19a"],
-    heroImage: "images/hero-healthspan.png",
+    heroImage: "/images/hero-healthspan.png",
   },
   unplug: {
     id: "unplug",
@@ -27,7 +27,7 @@ window.NUANU_VARIANTS = {
     heroAlt: "A woman in her late forties, head tipped back into the deep shade of a daybed, eyes closed. The ocean is a soft horizon line beyond. Mid-afternoon, natural light, candid.",
     heroCaption: "hero · daybed · ocean horizon · head back · shade",
     heroPalette: ["#1f2a30", "#3f5a64", "#7a98a0", "#d3d2c5"],
-    heroImage: "images/hero-unplug.png",
+    heroImage: "/images/hero-unplug.png",
   },
   reset: {
     id: "reset",
@@ -41,7 +41,7 @@ window.NUANU_VARIANTS = {
     heroAlt: "Close-up of a continuous glucose monitor on the upper arm of a person standing at a kitchen counter, morning light from a side window. A ceramic cup and a knife on a wooden board sit just out of focus.",
     heroCaption: "hero · CGM upper arm · kitchen · morning light",
     heroPalette: ["#2e2620", "#6a513c", "#b48b62", "#ecd5b1"],
-    heroImage: "images/hero-reset.png",
+    heroImage: "/images/hero-reset.png",
   },
   moms_reset: {
     id: "moms_reset",
@@ -55,7 +55,7 @@ window.NUANU_VARIANTS = {
     heroAlt: "Two pairs of hands, one older and one younger, holding small ceramic tea cups across a worn wooden table. Late-morning side light. Faces out of frame. Candid.",
     heroCaption: "hero · two hands · tea cups · wooden table · side light",
     heroPalette: ["#2a1f17", "#6f4f33", "#b0875a", "#e6ceaa"],
-    heroImage: "images/hero-moms.png",
+    heroImage: "/images/hero-moms.png",
   },
   work_well: {
     id: "work_well",
@@ -69,6 +69,6 @@ window.NUANU_VARIANTS = {
     heroAlt: "A laptop and a leather notebook open on a terrace table overlooking a green expanse of rice fields. Two ceramic cups, a pair of glasses, no person. Late-afternoon light.",
     heroCaption: "hero · laptop · notebook · rice fields · no person",
     heroPalette: ["#283224", "#4d6a3f", "#9bb079", "#dfd6b5"],
-    heroImage: "images/hero-workwell.png",
+    heroImage: "/images/hero-workwell.png",
   },
 };

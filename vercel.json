@@ -1,12 +1,5 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/healthspan", "destination": "/index.html" },
-    { "source": "/unplug", "destination": "/index.html" },
-    { "source": "/reset", "destination": "/index.html" },
-    { "source": "/moms-reset", "destination": "/index.html" },
-    { "source": "/work-well", "destination": "/index.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)\\.(png|jpg|jpeg|webp|avif)",

@@ -6,12 +6,12 @@ const { useState: useState2, useEffect: useEffect2 } = React;
 // -----------------------------------------------------------------------------
 function TakeHome() {
   const items = [
-    { name: "WHOOP 4.0", caption: "Continuous strain, recovery and sleep — yours after day three.", palette: ["#1f2a30","#3f5764","#84a0a8","#c5d2d3"], cap: "kit · whoop band on linen", image: "images/kit-whoop.png" },
-    { name: "Lingo CGM", caption: "Two weeks of continuous glucose. You will eat the same lunch twice and see two different curves.", palette: ["#2e2620","#6a513c","#b48b62","#ecd5b1"], cap: "kit · CGM patch + applicator", image: "images/kit-cgm.png" },
-    { name: "At-home blood kit", caption: "A second blood draw, ninety days out, mailed from your kitchen. The panel closes the loop.", palette: ["#1e2a25","#3a5648","#7c9482","#cdd9c8"], cap: "kit · blood draw box · linen cloth", image: "images/kit-bloodkit.png" },
-    { name: "DunedinPACE", caption: "Your epigenetic rate of ageing. We rerun it on the at-home kit so the number is comparable.", palette: ["#2a1f17","#6f4f33","#b0875a","#e6ceaa"], cap: "kit · saliva tube + booklet", image: "images/kit-dunedin.png" },
-    { name: "Retreat journal", caption: "Hand-bound. Daily prompts paired with your own panel. The only artefact that leaves with you.", palette: ["#28221b","#574635","#a8855e","#e7d5b5"], cap: "kit · journal · pencil · ribbon", image: "images/kit-journal.png" },
-    { name: "Final readout", caption: "A printed dossier of your fourteen days, delivered to your villa the evening before you fly.", palette: ["#1d2b29","#345049","#7a948a","#d3d6cf"], cap: "kit · printed dossier on table", image: "images/kit-readout.png" },
+    { name: "WHOOP 4.0", caption: "Continuous strain, recovery and sleep — yours after day three.", palette: ["#1f2a30","#3f5764","#84a0a8","#c5d2d3"], cap: "kit · whoop band on linen", image: "/images/kit-whoop.png" },
+    { name: "Lingo CGM", caption: "Two weeks of continuous glucose. You will eat the same lunch twice and see two different curves.", palette: ["#2e2620","#6a513c","#b48b62","#ecd5b1"], cap: "kit · CGM patch + applicator", image: "/images/kit-cgm.png" },
+    { name: "At-home blood kit", caption: "A second blood draw, ninety days out, mailed from your kitchen. The panel closes the loop.", palette: ["#1e2a25","#3a5648","#7c9482","#cdd9c8"], cap: "kit · blood draw box · linen cloth", image: "/images/kit-bloodkit.png" },
+    { name: "DunedinPACE", caption: "Your epigenetic rate of ageing. We rerun it on the at-home kit so the number is comparable.", palette: ["#2a1f17","#6f4f33","#b0875a","#e6ceaa"], cap: "kit · saliva tube + booklet", image: "/images/kit-dunedin.png" },
+    { name: "Retreat journal", caption: "Hand-bound. Daily prompts paired with your own panel. The only artefact that leaves with you.", palette: ["#28221b","#574635","#a8855e","#e7d5b5"], cap: "kit · journal · pencil · ribbon", image: "/images/kit-journal.png" },
+    { name: "Final readout", caption: "A printed dossier of your fourteen days, delivered to your villa the evening before you fly.", palette: ["#1d2b29","#345049","#7a948a","#d3d6cf"], cap: "kit · printed dossier on table", image: "/images/kit-readout.png" },
   ];
   return (
     <section className="bg-[var(--warm)]">
@@ -72,12 +72,12 @@ function TakeHome() {
 // -----------------------------------------------------------------------------
 function DayInFourteen() {
   const moments = [
-    { time: "06:00", title: "Quiet wake",        body: "No alarm. A teak chime from the verandah. Coconut water, electrolytes and an HRV check before your feet touch the path.", palette: ["#1f2218","#3c4530","#7a8265","#c7c5a8"], cap: "06:00 · verandah · pre-dawn light · tea pot", image: "images/day-0600.png" },
-    { time: "07:30", title: "Movement",          body: "Strength, mobility or qi gong in the open-air pavilion. Coach-led, never more than ten people on the mat.", palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "07:30 · pavilion · mat · coach in linen", image: "images/day-0730.png" },
-    { time: "09:15", title: "Doctor",            body: "Twenty minutes with the resident MD. Yesterday's WHOOP and CGM are open on the table. A small adjustment to today.", palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "09:15 · consult room · CGM + WHOOP on table", image: "images/day-0915.png" },
-    { time: "13:00", title: "Lunch & curve",     body: "A six-course tasting that doubles as a teaching meal. You watch your glucose curve while the chef walks the dish.", palette: ["#2a1f17","#6f4f33","#b08461","#ecd0a8"], cap: "13:00 · long table · plates · CGM on arm", image: "images/day-1300.png" },
-    { time: "16:00", title: "Restoration",       body: "Villa massage, Lumeira float or a sound bath. Your only job is to be unreachable, and you are.", palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "16:00 · spa hall · candle · linen drape", image: "images/day-1600.png" },
-    { time: "20:00", title: "Cohort dinner",     body: "Ten guests, two coaches, one chef. Conversation arrives at the slower tempo it has been waiting for.", palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "20:00 · long table · candles · open-air dining", image: "images/day-2000.png" },
+    { time: "06:00", title: "Quiet wake",        body: "No alarm. A teak chime from the verandah. Coconut water, electrolytes and an HRV check before your feet touch the path.", palette: ["#1f2218","#3c4530","#7a8265","#c7c5a8"], cap: "06:00 · verandah · pre-dawn light · tea pot", image: "/images/day-0600.png" },
+    { time: "07:30", title: "Movement",          body: "Strength, mobility or qi gong in the open-air pavilion. Coach-led, never more than ten people on the mat.", palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "07:30 · pavilion · mat · coach in linen", image: "/images/day-0730.png" },
+    { time: "09:15", title: "Doctor",            body: "Twenty minutes with the resident MD. Yesterday's WHOOP and CGM are open on the table. A small adjustment to today.", palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "09:15 · consult room · CGM + WHOOP on table", image: "/images/day-0915.png" },
+    { time: "13:00", title: "Lunch & curve",     body: "A six-course tasting that doubles as a teaching meal. You watch your glucose curve while the chef walks the dish.", palette: ["#2a1f17","#6f4f33","#b08461","#ecd0a8"], cap: "13:00 · long table · plates · CGM on arm", image: "/images/day-1300.png" },
+    { time: "16:00", title: "Restoration",       body: "Villa massage, Lumeira float or a sound bath. Your only job is to be unreachable, and you are.", palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "16:00 · spa hall · candle · linen drape", image: "/images/day-1600.png" },
+    { time: "20:00", title: "Cohort dinner",     body: "Ten guests, two coaches, one chef. Conversation arrives at the slower tempo it has been waiting for.", palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "20:00 · long table · candles · open-air dining", image: "/images/day-2000.png" },
   ];
   return (
     <section className="bg-white">
@@ -138,9 +138,9 @@ function DayInFourteen() {
 // -----------------------------------------------------------------------------
 function Team() {
   const people = [
-    { name: "Dr. Anya Wirjawan",  role: "Medical director",   blurb: "Internal medicine, twenty-two years. Leads the diagnostic panel and the final readout.", palette: ["#1d2b29","#3a5048","#7e948c","#d0d8d0"], cap: "portrait · MD · clinic doorway · natural light", image: "images/team-md.png" },
-    { name: "Komang Sutrisna",    role: "Head of practice",   blurb: "Yoga, qi gong and breath. Runs the daily movement schedule and the cohort dynamic.",   palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "portrait · head of practice · pavilion edge", image: "images/team-practice.png" },
-    { name: "Chef Léa Marchand",  role: "Resident chef",       blurb: "Plant-forward, glucose-aware. Each dish is plated with the curve you will see at 3pm.", palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "portrait · chef · kitchen pass · linen apron", image: "images/team-chef.png" },
+    { name: "Dr. Anya Wirjawan",  role: "Medical director",   blurb: "Internal medicine, twenty-two years. Leads the diagnostic panel and the final readout.", palette: ["#1d2b29","#3a5048","#7e948c","#d0d8d0"], cap: "portrait · MD · clinic doorway · natural light", image: "/images/team-md.png" },
+    { name: "Komang Sutrisna",    role: "Head of practice",   blurb: "Yoga, qi gong and breath. Runs the daily movement schedule and the cohort dynamic.",   palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "portrait · head of practice · pavilion edge", image: "/images/team-practice.png" },
+    { name: "Chef Léa Marchand",  role: "Resident chef",       blurb: "Plant-forward, glucose-aware. Each dish is plated with the curve you will see at 3pm.", palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "portrait · chef · kitchen pass · linen apron", image: "/images/team-chef.png" },
   ];
   return (
     <section className="bg-[var(--warm)]">
