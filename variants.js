@@ -71,4 +71,97 @@ window.NUANU_VARIANTS = {
     heroPalette: ["#283224", "#4d6a3f", "#9bb079", "#dfd6b5"],
     heroImage: "/images/hero-workwell.png",
   },
+
+  // ---------------------------------------------------------------------------
+  // Wellness retreats — no devices, no resident practitioners, 7 days, $5K flat.
+  // ---------------------------------------------------------------------------
+  parents: {
+    id: "parents",
+    kind: "wellness",
+    audience: "Parents Vitality",
+    audienceNote: "For parents who deserve to be taken care of.",
+    tag: "For parents who deserve to be taken care of.",
+    h1: "More healthy years together.",
+    sub: "Seven days at Nuanu Creative City, Bali. More energy, better sleep, real care. A vitality retreat designed for active adults 50–70 — not a medical programme, a reset for the people who spent their lives taking care of others.",
+    trustStrip: ["Application only", "Cohort of 10", "Bali · October 2026"],
+    hook: "Seven days · The gift that actually lasts",
+    priceBand: "$5,000",
+    heroAlt: "Two parents in their early sixties walk side by side along a quiet garden path at Nuanu Creative City at dawn. Warm side light, linen clothes, palms in the background. Candid, no posing.",
+    heroCaption: "hero · parents at dawn · garden path · warm light",
+    heroPalette: ["#2c382c", "#806a52", "#c6a47a", "#ecd9b8"],
+    heroImage: "/images/hero-parents.png",
+
+    premise: "Most gifts are forgotten by next week. This one adds years. For seven days your parent lives inside a programme built around movement, restoration and genuine human connection — and comes home different.",
+
+    pillars: [
+      {
+        title: "Move",
+        cadence: "Days 1 — 7",
+        body: "Daily guided sessions at human pace. Never more than ten people on the mat.",
+        items: [
+          "Mobility classes",
+          "Stretching",
+          "Joint mobility training",
+          "Balance training",
+          "Gentle strength training",
+          "Walking routines",
+          "Breathwork & posture training",
+        ],
+      },
+      {
+        title: "Rest",
+        cadence: "Throughout",
+        body: "Sound healing, breathwork and nervous system regulation. Sleep hygiene built into every day.",
+        items: [
+          "Sound healing",
+          "Evening breathwork",
+          "Sunset meditation",
+          "Sleep hygiene programme",
+        ],
+      },
+      {
+        title: "Restore",
+        cadence: "Throughout",
+        body: "Massage, spa and Nuanu campus activations. Your nervous system reorganises around the slower tempo.",
+        items: [
+          "Daily villa massage",
+          "Lumeira spa rituals",
+          "Nuanu campus activations",
+        ],
+      },
+      {
+        title: "Connect",
+        cadence: "Throughout",
+        body: "Group dinners, excursions and evening gatherings. A small cohort, real connection, someone always nearby.",
+        items: [
+          "Cohort dinners",
+          "Campus excursions",
+          "Evening gatherings",
+        ],
+      },
+    ],
+
+    investment: {
+      price: "$5,000",
+      priceUnit: "per guest · seven days",
+      duration: "Seven days, all-inclusive",
+      cohort: "Up to 10 guests · application only",
+      included: [
+        "Seven nights, private villa accommodation",
+        "All meals, plant-forward, glucose-aware",
+        "Daily guided movement at human pace",
+        "Sound healing, breathwork and meditation",
+        "Daily villa massage and Lumeira spa rituals",
+        "Cohort dinners and campus excursions",
+        "Airport transfer from Denpasar (DPS)",
+      ],
+      notIncluded: [
+        "Flights to and from Denpasar (DPS)",
+        "Travel insurance",
+        "Specialist add-ons",
+        "Companion accommodation (available, priced separately)",
+        "Gratuities (genuinely optional)",
+      ],
+    },
+  },
 };

@@ -813,13 +813,89 @@ function Footer() {
   return /* @__PURE__ */ React.createElement("footer", { className: "bg-[var(--ink)] text-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-16" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap items-end justify-between gap-8" }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline gap-3" }, /* @__PURE__ */ React.createElement("span", { className: "font-display text-[28px] tracking-tight" }, "nuanu"), /* @__PURE__ */ React.createElement("span", { className: "font-mono text-[10px] uppercase tracking-[0.22em] opacity-70" }, "Experience")), /* @__PURE__ */ React.createElement("p", { className: "mt-3 font-mono text-[10px] uppercase tracking-[0.22em] opacity-70 max-w-[420px]" }, "Nuanu Creative City \xB7 Jl. Pantai Cemongkak \xB7 Tabanan Regency \xB7 Bali \xB7 Indonesia")), /* @__PURE__ */ React.createElement("ul", { className: "flex flex-wrap items-center gap-x-10 gap-y-3 font-mono text-[10px] uppercase tracking-[0.22em]" }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", { href: "#", className: "opacity-75 hover:opacity-100" }, "Privacy")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", { href: "#", className: "opacity-75 hover:opacity-100" }, "Imprint")), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", { href: "#", className: "opacity-75 hover:opacity-100" }, "Contact")))), /* @__PURE__ */ React.createElement("div", { className: "mt-14 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.22em] opacity-55" }, /* @__PURE__ */ React.createElement("span", null, "\xA9 2026 Nuanu \xB7 All rights reserved"), /* @__PURE__ */ React.createElement("span", null, "Application only \xB7 Cohort of 10 \xB7 Bali, October 2026"))));
 }
 Object.assign(window, { TakeHome, DayInFourteen, Team, Investment, Apply, Footer });
+function WellnessHero({ v }) {
+  return /* @__PURE__ */ React.createElement("header", { id: "top", className: "relative w-full", style: { height: "min(92vh, 920px)" } }, /* @__PURE__ */ React.createElement(
+    window.PhotoPlaceholder,
+    {
+      palette: v.heroPalette,
+      caption: v.heroCaption,
+      alt: v.heroAlt,
+      image: v.heroImage,
+      className: "absolute inset-0",
+      captionPosition: "tl"
+    }
+  ), /* @__PURE__ */ React.createElement("div", { className: "relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 pt-28 pb-16 flex flex-col justify-end" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-[920px] text-white" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase opacity-85 mb-6" }, v.audience, " \xB7 ", v.audienceNote), /* @__PURE__ */ React.createElement("h1", { className: "font-display text-[44px] md:text-[64px] lg:text-[76px] leading-[1.02] tracking-[-0.025em]" }, v.h1), /* @__PURE__ */ React.createElement("p", { className: "mt-7 max-w-[680px] text-[16px] md:text-[17px] leading-[1.55] text-white/90" }, v.sub), /* @__PURE__ */ React.createElement("div", { className: "mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] tracking-[0.22em] uppercase text-white/85" }, v.trustStrip.map((t, i) => /* @__PURE__ */ React.createElement(React.Fragment, { key: i }, i > 0 && /* @__PURE__ */ React.createElement("span", { className: "opacity-50" }, "\xB7"), /* @__PURE__ */ React.createElement("span", null, t)))), /* @__PURE__ */ React.createElement("div", { className: "mt-10 flex flex-wrap items-center gap-5" }, /* @__PURE__ */ React.createElement("a", { href: "#apply", className: "btn-primary-on-dark" }, "Request an invitation"), /* @__PURE__ */ React.createElement("a", { href: "#concept", className: "btn-ghost-on-dark group" }, /* @__PURE__ */ React.createElement("span", null, "See the seven-day concept"), /* @__PURE__ */ React.createElement(window.Icon.Arrow, { className: "transition-transform group-hover:translate-x-1" }))))));
+}
+function WellnessPremise({ v }) {
+  return /* @__PURE__ */ React.createElement("section", { className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-44" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-10" }, "01 \xB7 The premise")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement(
+    "p",
+    {
+      className: "font-display text-[32px] md:text-[44px] lg:text-[52px] leading-[1.15] tracking-[-0.02em] text-[var(--ink)] max-w-[1200px]",
+      style: { textWrap: "balance" }
+    },
+    v.premise
+  ))));
+}
+function WellnessConcept({ v }) {
+  const pillars = v.pillars || [];
+  return /* @__PURE__ */ React.createElement("section", { id: "concept", className: "bg-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-end justify-between flex-wrap gap-y-6 mb-16 md:mb-24" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "02 \xB7 The seven-day concept"), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, "Four shapes, held across one week."))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[360px]" }, "Move, rest, restore, connect. Each shape has its own tempo, and none of them ask anything heroic of the body."))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" }, pillars.map((p, i) => /* @__PURE__ */ React.createElement(window.Reveal, { key: p.title, delay: i % 2 * 60 }, /* @__PURE__ */ React.createElement("article", { className: "vessel-card h-full" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-start justify-between mb-10" }, /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[34px] md:text-[40px] tracking-[-0.02em] text-[var(--green)]" }, p.title), /* @__PURE__ */ React.createElement("span", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55" }, String(i + 1).padStart(2, "0"), " / ", String(pillars.length).padStart(2, "0"))), /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60" }, p.cadence), /* @__PURE__ */ React.createElement("p", { className: "mt-4 font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/85" }, p.body), /* @__PURE__ */ React.createElement("ul", { className: "mt-8 border-t border-[var(--ink)]/15" }, p.items.map((l) => /* @__PURE__ */ React.createElement(
+    "li",
+    {
+      key: l,
+      className: "border-b border-[var(--ink)]/15 py-3 flex items-center justify-between font-body text-[13px] text-[var(--ink)]/80"
+    },
+    /* @__PURE__ */ React.createElement("span", null, l),
+    /* @__PURE__ */ React.createElement("span", { className: "font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--ink)]/45" }, "included")
+  )))))))));
+}
+function WellnessInvestment({ v }) {
+  const inv = v.investment || {};
+  const included = inv.included || [];
+  const notIncluded = inv.notIncluded || [];
+  return /* @__PURE__ */ React.createElement("section", { className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "03 \xB7 The investment")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, "One price. All-inclusive. No urgency.")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120 }, /* @__PURE__ */ React.createElement("div", { className: "mt-12 vessel-card bg-[var(--warm)] !p-8 md:!p-12 lg:!p-16" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-x-10 gap-y-10" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4 md:border-r md:border-[var(--ink)]/15 md:pr-10" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60" }, inv.priceUnit || "Per guest \xB7 seven days"), /* @__PURE__ */ React.createElement("div", { className: "mt-3 font-display text-[44px] md:text-[56px] leading-[1.02] tracking-[-0.03em] text-[var(--green)]" }, inv.price), /* @__PURE__ */ React.createElement("p", { className: "mt-5 font-body text-[14px] leading-[1.6] text-[var(--ink)]/80" }, inv.duration), /* @__PURE__ */ React.createElement("div", { className: "mt-8 pt-8 border-t border-[var(--ink)]/15" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60 mb-2" }, "Cohort size"), /* @__PURE__ */ React.createElement("div", { className: "font-display text-[22px] tracking-[-0.01em] text-[var(--ink)]" }, inv.cohort))), /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--green)] mb-5" }, "What is included"), /* @__PURE__ */ React.createElement("ul", { className: "space-y-3" }, included.map((l) => /* @__PURE__ */ React.createElement(
+    "li",
+    {
+      key: l,
+      className: "flex gap-3 font-body text-[14px] leading-[1.55] text-[var(--ink)]/85"
+    },
+    /* @__PURE__ */ React.createElement(
+      "span",
+      {
+        "aria-hidden": "true",
+        className: "font-mono text-[10px] tracking-[0.22em] text-[var(--green)] mt-[3px]"
+      },
+      "+"
+    ),
+    /* @__PURE__ */ React.createElement("span", null, l)
+  )))), /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55 mb-5" }, "What is not included"), /* @__PURE__ */ React.createElement("ul", { className: "space-y-3" }, notIncluded.map((l) => /* @__PURE__ */ React.createElement(
+    "li",
+    {
+      key: l,
+      className: "flex gap-3 font-body text-[14px] leading-[1.55] text-[var(--ink)]/70"
+    },
+    /* @__PURE__ */ React.createElement(
+      "span",
+      {
+        "aria-hidden": "true",
+        className: "font-mono text-[10px] tracking-[0.22em] text-[var(--ink)]/45 mt-[3px]"
+      },
+      "\u2212"
+    ),
+    /* @__PURE__ */ React.createElement("span", null, l)
+  )))))))));
+}
+function WellnessApp({ v }) {
+  return /* @__PURE__ */ React.createElement("div", { className: "bg-white text-[var(--ink)]" }, /* @__PURE__ */ React.createElement(window.Nav, null), /* @__PURE__ */ React.createElement(WellnessHero, { v }), /* @__PURE__ */ React.createElement(WellnessPremise, { v }), /* @__PURE__ */ React.createElement(WellnessConcept, { v }), /* @__PURE__ */ React.createElement(WellnessInvestment, { v }), /* @__PURE__ */ React.createElement(window.Apply, { v }), /* @__PURE__ */ React.createElement(window.Footer, null));
+}
+Object.assign(window, { WellnessApp, WellnessHero, WellnessPremise, WellnessConcept, WellnessInvestment });
 const PATH_TO_VARIANT = {
   "/": "master",
   "/healthspan": "master",
   "/unplug": "unplug",
   "/reset": "reset",
   "/moms-reset": "moms_reset",
-  "/work-well": "work_well"
+  "/work-well": "work_well",
+  "/parents": "parents"
 };
 const __path = (typeof window !== "undefined" ? window.location.pathname : "/").replace(/\/$/, "") || "/";
 const __host = typeof window !== "undefined" ? window.location.hostname : "";
@@ -834,7 +910,7 @@ function App() {
   const variants = window.NUANU_VARIANTS;
   const [tweaks, setTweak] = window.useTweaks(TWEAK_DEFAULTS);
   const v = variants[tweaks.variant] || variants.master;
-  return /* @__PURE__ */ React.createElement("div", { className: "bg-white text-[var(--ink)]" }, /* @__PURE__ */ React.createElement(Nav, null), /* @__PURE__ */ React.createElement(Hero, { v }), /* @__PURE__ */ React.createElement(Premise, { v }), /* @__PURE__ */ React.createElement(Arc, null), /* @__PURE__ */ React.createElement(Biomarkers, null), /* @__PURE__ */ React.createElement(TakeHome, null), /* @__PURE__ */ React.createElement(DayInFourteen, null), /* @__PURE__ */ React.createElement(Team, null), /* @__PURE__ */ React.createElement(Investment, { v }), /* @__PURE__ */ React.createElement(Apply, { v }), /* @__PURE__ */ React.createElement(Footer, null), __isDev && /* @__PURE__ */ React.createElement(window.TweaksPanel, null, /* @__PURE__ */ React.createElement(window.TweakSection, { label: "Audience variant" }, /* @__PURE__ */ React.createElement(
+  const tweaksPanel = __isDev && /* @__PURE__ */ React.createElement(window.TweaksPanel, null, /* @__PURE__ */ React.createElement(window.TweakSection, { label: "Audience variant" }, /* @__PURE__ */ React.createElement(
     window.TweakSelect,
     {
       label: "Variant",
@@ -845,10 +921,15 @@ function App() {
         { label: "B \xB7 Unplug", value: "unplug" },
         { label: "C \xB7 Reset", value: "reset" },
         { label: "D \xB7 Mom's Reset", value: "moms_reset" },
-        { label: "E \xB7 Work Well", value: "work_well" }
+        { label: "E \xB7 Work Well", value: "work_well" },
+        { label: "F \xB7 Parents Vitality", value: "parents" }
       ]
     }
-  ), /* @__PURE__ */ React.createElement("div", { style: { marginTop: 8, padding: "10px 0 0", borderTop: "1px solid rgba(41,38,27,0.12)" } }, /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(41,38,27,0.55)", marginBottom: 4 } }, "Audience"), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-body)", fontSize: 12, lineHeight: 1.5, color: "rgba(41,38,27,0.85)", marginBottom: 10 } }, v.audienceNote), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(41,38,27,0.55)", marginBottom: 4 } }, "Hook"), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-body)", fontSize: 12, lineHeight: 1.5, color: "rgba(41,38,27,0.85)", marginBottom: 10 } }, v.hook), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(41,38,27,0.55)", marginBottom: 4 } }, "Price band"), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-body)", fontSize: 12, lineHeight: 1.5, color: "rgba(41,38,27,0.85)" } }, v.priceBand)))));
+  ), /* @__PURE__ */ React.createElement("div", { style: { marginTop: 8, padding: "10px 0 0", borderTop: "1px solid rgba(41,38,27,0.12)" } }, /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(41,38,27,0.55)", marginBottom: 4 } }, "Audience"), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-body)", fontSize: 12, lineHeight: 1.5, color: "rgba(41,38,27,0.85)", marginBottom: 10 } }, v.audienceNote), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(41,38,27,0.55)", marginBottom: 4 } }, "Hook"), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-body)", fontSize: 12, lineHeight: 1.5, color: "rgba(41,38,27,0.85)", marginBottom: 10 } }, v.hook), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(41,38,27,0.55)", marginBottom: 4 } }, "Price band"), /* @__PURE__ */ React.createElement("div", { style: { fontFamily: "var(--font-body)", fontSize: 12, lineHeight: 1.5, color: "rgba(41,38,27,0.85)" } }, v.priceBand))));
+  if (v.kind === "wellness") {
+    return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(window.WellnessApp, { v }), tweaksPanel);
+  }
+  return /* @__PURE__ */ React.createElement("div", { className: "bg-white text-[var(--ink)]" }, /* @__PURE__ */ React.createElement(Nav, null), /* @__PURE__ */ React.createElement(Hero, { v }), /* @__PURE__ */ React.createElement(Premise, { v }), /* @__PURE__ */ React.createElement(Arc, null), /* @__PURE__ */ React.createElement(Biomarkers, null), /* @__PURE__ */ React.createElement(TakeHome, null), /* @__PURE__ */ React.createElement(DayInFourteen, null), /* @__PURE__ */ React.createElement(Team, null), /* @__PURE__ */ React.createElement(Investment, { v }), /* @__PURE__ */ React.createElement(Apply, { v }), /* @__PURE__ */ React.createElement(Footer, null), tweaksPanel);
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(/* @__PURE__ */ React.createElement(App, null));
