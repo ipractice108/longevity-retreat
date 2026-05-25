@@ -98,6 +98,10 @@ window.NUANU_VARIANTS = {
         title: "Move",
         cadence: "Days 1 — 7",
         body: "Daily guided sessions at human pace. Never more than ten people on the mat.",
+        image: "/images/pillar-move.png",
+        imageAlt: "A woman in her early sixties, silver hair pulled back, mid-stretch on a woven rattan mat in an open-air teak pavilion at Nuanu Creative City, mid-morning side light, palm canopy beyond.",
+        imageCaption: "pillar · move · pavilion · mat · morning light",
+        imagePalette: ["#2c382c", "#5b6049", "#a18960", "#dec19a"],
         items: [
           "Mobility classes",
           "Stretching",
@@ -112,6 +116,10 @@ window.NUANU_VARIANTS = {
         title: "Rest",
         cadence: "Throughout",
         body: "Sound healing, breathwork and nervous system regulation. Sleep hygiene built into every day.",
+        image: "/images/pillar-rest.png",
+        imageAlt: "Three brass Tibetan singing bowls on a folded cream linen cloth, a wooden mallet beside them and a single beeswax candle burning low, frangipani blossom near the largest bowl, polished spa floor.",
+        imageCaption: "pillar · rest · singing bowls · candle · spa floor",
+        imagePalette: ["#2a1f17", "#6f4f33", "#b0875a", "#e6ceaa"],
         items: [
           "Sound healing",
           "Evening breathwork",
@@ -123,6 +131,10 @@ window.NUANU_VARIANTS = {
         title: "Restore",
         cadence: "Throughout",
         body: "Massage, spa and Nuanu campus activations. Your nervous system reorganises around the slower tempo.",
+        image: "/images/pillar-restore.png",
+        imageAlt: "Practitioner's hands working a slow stroke down a guest's relaxed forearm on a white-draped massage table at Lumeira spa, a frangipani branch in a stone vessel softly out of focus on the right.",
+        imageCaption: "pillar · restore · massage hands · lumeira spa",
+        imagePalette: ["#22180f", "#4d3621", "#9a754c", "#e3c89b"],
         items: [
           "Daily villa massage",
           "Lumeira spa rituals",
@@ -133,6 +145,10 @@ window.NUANU_VARIANTS = {
         title: "Connect",
         cadence: "Throughout",
         body: "Group dinners, excursions and evening gatherings. A small cohort, real connection, someone always nearby.",
+        image: "/images/pillar-connect.png",
+        imageAlt: "A long teak dinner table set for eight at blue hour, plant-forward sharing dishes mid-meal, three lit beeswax candles down the centre, hands at the edges reaching for plates, palm silhouettes against a deep teal sky beyond the pavilion eaves.",
+        imageCaption: "pillar · connect · cohort dinner · blue hour",
+        imagePalette: ["#1d2b29", "#2f4a44", "#6e8a82", "#c3d0c8"],
         items: [
           "Cohort dinners",
           "Campus excursions",

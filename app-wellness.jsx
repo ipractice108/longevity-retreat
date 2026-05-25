@@ -96,34 +96,45 @@ function WellnessConcept({ v }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {pillars.map((p, i) => (
             <window.Reveal key={p.title} delay={(i % 2) * 60}>
-              <article className="vessel-card h-full">
-                <div className="flex items-start justify-between mb-10">
-                  <h3 className="font-display text-[34px] md:text-[40px] tracking-[-0.02em] text-[var(--green)]">
-                    {p.title}
-                  </h3>
-                  <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55">
-                    {String(i + 1).padStart(2, "0")} / {String(pillars.length).padStart(2, "0")}
-                  </span>
+              <article className="vessel-card !p-0 overflow-hidden h-full flex flex-col">
+                {p.image && (
+                  <window.PhotoPlaceholder
+                    palette={p.imagePalette}
+                    caption={p.imageCaption}
+                    alt={p.imageAlt}
+                    image={p.image}
+                    className="aspect-[4/3]"
+                  />
+                )}
+                <div className="p-7 md:p-9 flex flex-col flex-1">
+                  <div className="flex items-start justify-between mb-6">
+                    <h3 className="font-display text-[34px] md:text-[40px] tracking-[-0.02em] text-[var(--green)]">
+                      {p.title}
+                    </h3>
+                    <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55">
+                      {String(i + 1).padStart(2, "0")} / {String(pillars.length).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60">
+                    {p.cadence}
+                  </div>
+                  <p className="mt-3 font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/85">
+                    {p.body}
+                  </p>
+                  <ul className="mt-6 border-t border-[var(--ink)]/15">
+                    {p.items.map((l) => (
+                      <li
+                        key={l}
+                        className="border-b border-[var(--ink)]/15 py-3 flex items-center justify-between font-body text-[13px] text-[var(--ink)]/80"
+                      >
+                        <span>{l}</span>
+                        <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--ink)]/45">
+                          included
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60">
-                  {p.cadence}
-                </div>
-                <p className="mt-4 font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/85">
-                  {p.body}
-                </p>
-                <ul className="mt-8 border-t border-[var(--ink)]/15">
-                  {p.items.map((l) => (
-                    <li
-                      key={l}
-                      className="border-b border-[var(--ink)]/15 py-3 flex items-center justify-between font-body text-[13px] text-[var(--ink)]/80"
-                    >
-                      <span>{l}</span>
-                      <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--ink)]/45">
-                        included
-                      </span>
-                    </li>
-                  ))}
-                </ul>
               </article>
             </window.Reveal>
           ))}
