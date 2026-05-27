@@ -82,8 +82,8 @@ window.NUANU_VARIANTS = {
     audienceNote: "For parents who deserve to be taken care of.",
     tag: "For parents who deserve to be taken care of.",
     h1: "More healthy years together.",
-    sub: "Seven days at Nuanu Creative City, Bali. More energy, better sleep, real care. A vitality retreat designed for active adults 50–70 — not a medical programme, a reset for the people who spent their lives taking care of others.",
-    trustStrip: ["Application only", "Cohort of 10", "Bali · October 2026"],
+    sub: "Seven days at Nuanu Creative City, Bali, for active adults 50–70. Not a medical programme — a reset for the people who spent their lives taking care of others. Move gently, sleep deeply, eat well, be looked after by a team that knows your parent's name from day one.",
+    trustStrip: ["Seven days", "All-inclusive", "Cohort of 10", "From $5,000"],
     hook: "Seven days · The gift that actually lasts",
     priceBand: "$5,000",
     heroAlt: "Two parents in their early sixties walk side by side along a quiet garden path at Nuanu Creative City at dawn. Warm side light, linen clothes, palms in the background. Candid, no posing.",
@@ -91,7 +91,82 @@ window.NUANU_VARIANTS = {
     heroPalette: ["#2c382c", "#806a52", "#c6a47a", "#ecd9b8"],
     heroImage: "/images/hero-parents.png",
 
-    premise: "Most gifts are forgotten by next week. This one adds years. For seven days your parent lives inside a programme built around movement, restoration and genuine human connection — and comes home different.",
+    premise: "Most gifts are forgotten by next week. This one adds years. For seven days your parent steps inside a programme built around gentle movement, deep restoration, real food and unhurried human connection — and comes home different. Looser shoulders. Slower breath. A longer fuse. A clearer head. The kind of difference the people closest to them notice first.",
+
+    outcomes: {
+      intro: "After seven days at Nuanu, expect:",
+      items: [
+        { title: "Sleep that resets",                                    body: "Usually inside the first three nights." },
+        { title: "Looser hips, looser shoulders, better balance",        body: "Often noticeable by day five." },
+        { title: "A nervous system that has stopped running ahead",      body: "Calmer mornings, a longer fuse." },
+        { title: "Habits that survive the flight home",                   body: "Five minutes of mobility, ten minutes of breath, a walking pace they enjoy." },
+        { title: "A take-home book of recipes, playlists and routines",   body: "Designed for their kitchen, not ours." },
+      ],
+      forIntro: "This retreat is for parents 50–70 who are:",
+      forItems: [
+        "Still active, still curious.",
+        "Comfortable on a twenty-minute walk (everything else scales).",
+        "Quietly tired of being the one who takes care of everyone else.",
+        "The kind of person who would never book this for themselves.",
+      ],
+    },
+
+    midCta: {
+      eyebrow: "Seven days · all-inclusive · from $5,000",
+      headline: "A small cohort, a quiet week, a gift that lasts.",
+      buttonLabel: "Request an invitation",
+    },
+
+    day: {
+      heading: "A day at Nuanu",
+      intro: "Days flex. The body, not the clock, sets the pace. One illustrative shape, held gently.",
+      moments: [
+        { time: "06:30", title: "Wake gently",            body: "Tea on the verandah, a slow walk on the beach as the light comes up.",                   palette: ["#1f2218","#3c4530","#7a8265","#c7c5a8"], cap: "06:30 · verandah · sunrise · tea pot",                 image: null },
+        { time: "08:00", title: "Mobility & breath",       body: "Open-air deck, coach-led, never more than ten on the mat.",                              palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "08:00 · open-air movement deck · jungle behind",       image: "/images/pillar-move.png" },
+        { time: "09:00", title: "Slow breakfast",          body: "Garden seating, table-style, no rush.",                                                   palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "09:00 · garden breakfast · plates and bowls",          image: null },
+        { time: "10:30", title: "Free",                    body: "Lumeira spa, sound dome, or the pool — your parent's call, not yours.",                  palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "10:30 · spa pavilion · linen drapes · soft light",     image: "/images/pillar-rest.png" },
+        { time: "12:30", title: "Long lunch",              body: "Plant-forward, Mediterranean-Bali plating, served at the cohort table.",                 palette: ["#2a1f17","#6f4f33","#b08461","#ecd0a8"], cap: "12:30 · long lunch table · shared dishes",             image: null },
+        { time: "14:00", title: "Villa massage",           body: "Or quiet rest. By day three, the body asks for one of these without being prompted.",    palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "14:00 · massage table · folded linen · candle",        image: "/images/pillar-restore.png" },
+        { time: "16:00", title: "Strength & posture",       body: "Gentle, group of ten, focused on balance and ease — the things that matter at sixty.",  palette: ["#1f2a18","#3a4b2c","#7a8c5a","#c8d1aa"], cap: "16:00 · pavilion · standing balance work",             image: null },
+        { time: "17:30", title: "Sunset meditation",        body: "On the deck, facing the ocean. Twenty minutes that recalibrate the week.",              palette: ["#2a1f17","#6f4f33","#b0875a","#e6ceaa"], cap: "17:30 · sunset deck · facing the ocean",               image: null },
+        { time: "19:00", title: "Dinner together",          body: "Cohort table, shared dishes, candles, no phones.",                                       palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "19:00 · cohort dinner · blue hour · candles",          image: "/images/pillar-connect.png" },
+        { time: "20:30", title: "Sound healing",            body: "Or a quiet read by the pool. Bed early — by day four, that is the request, not the rule.", palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "20:30 · sound bowls · low light · spa floor",           image: null },
+      ],
+    },
+
+    whyNuanu: {
+      heading: "Why Nuanu",
+      intro: "Nuanu Creative City is a 44-hectare campus on Bali's west coast — wellness pavilions, jungle trails, dunes and sunset beach in one walkable village. A non-clinical setting, on purpose. No machines, no devices, no white walls. A retreat, not a clinic.",
+      points: [
+        { title: "Lumeira Wellness",                            body: "A full spa pavilion: massage, hydrotherapy, sound dome, ritual treatments. Daily access for every guest." },
+        { title: "Open-air movement studios",                    body: "Teak decks for mobility, yoga, posture and balance work — shaded, unhurried, never crowded." },
+        { title: "Bali-grown, Mediterranean-inspired food",       body: "Three meals a day, plant-forward, every dietary need quietly handled. Served table-style." },
+        { title: "Private single-storey villas",                  body: "Step-free where it matters, quiet at night, with a verandah for the morning tea ritual." },
+        { title: "A cohort of ten, never more",                  body: "By day two, the guides, therapists and host team know every guest by name." },
+        { title: "One walkable campus",                           body: "No minibus transfers between activities. Beach, jungle, spa and movement deck are minutes apart." },
+      ],
+    },
+
+    faq: {
+      heading: "Questions",
+      intro: "Short answers to what gift-buyers ask us most.",
+      items: [
+        { q: "Is this medical?",                          a: "No. No diagnostics, no protocols, no resident doctor on call. A wellness retreat designed for active adults." },
+        { q: "What if my parent is shy in groups?",        a: "Cohort caps at ten and every activity is opt-in. Many guests arrive on their own and leave with a small circle." },
+        { q: "Can two parents come together?",             a: "Yes. Companion pricing is available on request — they share a villa, attend the same programme." },
+        { q: "What is the fitness floor?",                  a: "Comfortable walking for twenty minutes. Everything else scales — every class has a gentler option." },
+        { q: "Where exactly is Nuanu?",                     a: "Tabanan, on the west coast of Bali — about ninety minutes from Denpasar (DPS) airport. Pickup included." },
+        { q: "When do cohorts run?",                         a: "Monthly. Next available dates are shared on application." },
+        { q: "Can I get daily updates while they are there?", a: "Yes. A short photo and note from the host team, sent on WhatsApp once a day, on request." },
+      ],
+    },
+
+    closing: {
+      line: "More healthy years together.",
+      sub: "Seven days. From $5,000. Cohorts running monthly.",
+      buttonLabel: "Request an invitation",
+    },
+
 
     pillars: [
       {

@@ -135,6 +135,16 @@
 
     /* Inputs */
     input, textarea, select, button { font-family: inherit; }
+
+    /* Print / headless: Reveal animations stay opacity:0 until IntersectionObserver fires,
+       which never happens in print mode. Force them visible so printed copies + screenshots
+       capture the full layout. */
+    @media print {
+      [style*="opacity: 0"], [style*="opacity:0"] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
   </style>
 
   <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
