@@ -92,9 +92,9 @@ window.NUANU_VARIANTS = {
     trustStrip: ["7 days", "All-inclusive", "Cohort of 12", "$5,000"],
     hook: "Energy. Mobility. Clarity.",
     priceBand: "$5,000",
-    heroAlt: "An elegant woman in her early sixties in linen clothing sits by a tall window overlooking a tropical garden at Nuanu Creative City. Soft golden side light, premium editorial interior, candid composition.",
-    heroCaption: "hero · woman 60+ · linen · window · tropical garden",
-    heroPalette: ["#2c382c", "#7d6951", "#c1a073", "#ecd9b6"],
+    heroAlt: "An active couple in their early sixties run side by side along a soft tropical path at Nuanu Creative City. The woman, in a pale blue tank and short shorts, smiles broadly; the man behind her in a navy tee, mid-stride. Palms and a small Balinese shrine frame the path. Bright morning light, candid, premium editorial.",
+    heroCaption: "hero · couple 60+ · running · tropical path · morning",
+    heroPalette: ["#2c4a2a", "#5a7a40", "#a8b56e", "#e5e2c8"],
     heroImage: "/images/hero-parents.png",
     heroPrimaryCtaLabel: "Reserve your spot",
     heroSecondaryCtaLabel: "Learn more",
@@ -158,8 +158,8 @@ window.NUANU_VARIANTS = {
         { palette: ["#2a1f17","#6f4f33","#b0875a","#e6ceaa"], cap: "lumeira spa · sound bowls",   image: "/images/pillar-rest.png",    alt: "Brass singing bowls on linen at Lumeira spa." },
         { palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "massage table · folded linen", image: "/images/pillar-restore.png", alt: "Massage table at Lumeira spa, soft natural light." },
         { palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "cohort dinner · blue hour",   image: "/images/pillar-connect.png", alt: "Cohort dinner table at blue hour, shared dishes." },
-        { palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "pool lounger · jungle view",   image: null, alt: "An empty teak pool lounger at the edge of the campus pool, jungle view beyond, no people, premium editorial." },
-        { palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "spa interior · soft light",    image: null, alt: "A quiet spa interior at Nuanu, natural stone and teak, soft afternoon light, no people, premium editorial." },
+        { palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "pool lounger · jungle view",   image: "/images/gallery-pool.png", alt: "An empty teak pool lounger at the edge of the campus pool, jungle view beyond, no people, premium editorial." },
+        { palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "spa interior · soft light",    image: "/images/gallery-spa.png",  alt: "A quiet spa interior at Nuanu, natural stone and teak, soft afternoon light, no people, premium editorial." },
       ],
     },
 
@@ -243,7 +243,7 @@ window.NUANU_VARIANTS = {
       imageAlt: "An elegant guest in their early sixties in a soft spa robe sits on a private verandah with a porcelain teacup. Morning jungle light, premium editorial composition, relaxed posture.",
       imageCaption: "day 8 · verandah · tea · jungle light",
       imagePalette: ["#22180f", "#4d3621", "#9a754c", "#e3c89b"],
-      image: null,
+      image: "/images/day8-verandah.png",
     },
 
     // Where the retreat takes place
@@ -267,9 +267,9 @@ window.NUANU_VARIANTS = {
         ],
       },
       images: [
-        { palette: ["#2c382c","#5b6049","#a18960","#dec19a"], cap: "nuanu campus · golden hour", image: null, alt: "Wide view of Nuanu Creative City at golden hour, organic modern architecture, tropical landscape, no people." },
-        { palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "pool · ocean horizon",        image: null, alt: "Empty teak pool deck with an ocean horizon line, soft afternoon light." },
-        { palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "spa hall · natural materials", image: null, alt: "Quiet spa hall at Nuanu, natural stone and teak, candle, no people." },
+        { palette: ["#2c382c","#5b6049","#a18960","#dec19a"], cap: "nuanu campus · golden hour", image: "/images/place-campus.png",   alt: "Wide view of Nuanu Creative City at golden hour, organic modern architecture, tropical landscape, no people." },
+        { palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "pool · ocean horizon",        image: "/images/place-pool.png",     alt: "Empty teak pool deck with an ocean horizon line, soft afternoon light." },
+        { palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "spa hall · natural materials", image: "/images/place-spa-hall.png", alt: "Quiet spa hall at Nuanu, natural stone and teak, candle, no people." },
       ],
     },
 

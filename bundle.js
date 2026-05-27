@@ -874,7 +874,7 @@ function WellnessGallery({ v }) {
       caption: img.cap,
       alt: img.alt || img.cap,
       image: img.image,
-      className: "aspect-square"
+      className: "aspect-square rounded-[20px]"
     }
   ))))));
 }
