@@ -75,184 +75,246 @@ window.NUANU_VARIANTS = {
   // ---------------------------------------------------------------------------
   // Wellness retreats — no devices, no resident practitioners, 7 days, $5K flat.
   // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // Parents Vitality Retreat — wellness self-buyer 55+ layout (v3).
+  // Structure follows Kamalaya "Relax & Renew" section order;
+  // services grids follow SHA "Leaders Health & Performance" pattern.
+  // ---------------------------------------------------------------------------
   parents: {
     id: "parents",
     kind: "wellness",
-    audience: "Parents Vitality",
-    audienceNote: "For parents who deserve to be taken care of.",
-    tag: "For parents who deserve to be taken care of.",
-    h1: "More healthy years together.",
-    sub: "Seven days at Nuanu Creative City, Bali, for active adults 50–70. Not a medical programme — a reset for the people who spent their lives taking care of others. Move gently, sleep deeply, eat well, be looked after by a team that knows your parent's name from day one.",
-    trustStrip: ["Seven days", "All-inclusive", "Cohort of 10", "From $5,000"],
-    hook: "Seven days · The gift that actually lasts",
+    layout: "active-vitality",
+    audience: "Parents Vitality Retreat",
+    audienceNote: "Energy. Mobility. Clarity. — 7 days for those 55+ who don't plan to slow down.",
+    tag: "Parents Vitality Retreat",
+    h1: "Energy. Mobility. Clarity.",
+    sub: "Seven days at Nuanu Creative City, Bali — for active adults 55+ who don't plan to slow down. Not a medical clinic, not a heroic boot camp. A premium reset built around comfort, recovery, and the inputs that actually move the needle.",
+    trustStrip: ["7 days", "All-inclusive", "Cohort of 12", "$5,000"],
+    hook: "Energy. Mobility. Clarity.",
     priceBand: "$5,000",
-    heroAlt: "Two parents in their early sixties walk side by side along a quiet garden path at Nuanu Creative City at dawn. Warm side light, linen clothes, palms in the background. Candid, no posing.",
-    heroCaption: "hero · parents at dawn · garden path · warm light",
-    heroPalette: ["#2c382c", "#806a52", "#c6a47a", "#ecd9b8"],
+    heroAlt: "An elegant woman in her early sixties in linen clothing sits by a tall window overlooking a tropical garden at Nuanu Creative City. Soft golden side light, premium editorial interior, candid composition.",
+    heroCaption: "hero · woman 60+ · linen · window · tropical garden",
+    heroPalette: ["#2c382c", "#7d6951", "#c1a073", "#ecd9b6"],
     heroImage: "/images/hero-parents.png",
+    heroPrimaryCtaLabel: "Reserve your spot",
+    heroSecondaryCtaLabel: "Learn more",
+    heroSecondaryHref: "#intro",
 
-    premise: "Most gifts are forgotten by next week. This one adds years. For seven days your parent steps inside a programme built around gentle movement, deep restoration, real food and unhurried human connection — and comes home different. Looser shoulders. Slower breath. A longer fuse. A clearer head. The kind of difference the people closest to them notice first.",
+    // 3-col strip (Kamalaya goals / for / team)
+    intro3Col: {
+      eyebrow: "01 · Programme overview",
+      cols: [
+        {
+          title: "Program goals",
+          items: [
+            "Restore daily energy.",
+            "Reclaim mobility and ease.",
+            "A clear, well-rested mind.",
+            "Habits that survive the flight home.",
+          ],
+        },
+        {
+          title: "Recommended for",
+          items: [
+            "Active adults 55+ who feel younger than their age.",
+            "People who want to stay active for the long run.",
+            "Those with slightly less energy than they used to have.",
+            "Guests who value comfort, not heroics.",
+            "Those seeking restoration, not medical treatment.",
+          ],
+        },
+        {
+          title: "Your environment",
+          items: [
+            "Nuanu Creative City, Bali.",
+            "Cohort of up to 12 guests.",
+            "7 days, all-inclusive.",
+            "Private room. Three meals a day.",
+            "Application only.",
+          ],
+        },
+      ],
+      footnote: "If you need a medical clinic, this is not the best fit. If you want to regain vitality — you are in the right place.",
+      cta: { label: "Reserve your spot", href: "#apply" },
+    },
 
-    outcomes: {
-      intro: "After seven days at Nuanu, expect:",
+    // Premise + 3 principles (Kamalaya editorial paragraph block)
+    principles: {
+      eyebrow: "02 · The premise",
+      headline: "Why age is not the main factor of energy.",
+      body: "Science is clear: lifestyle shapes how we age far more than genetics does. At 55, 65 or 75 you can wake up with more energy than you had at 40 — when the week is built around comfort, recovery and the right inputs. This is not a clinic. It is a quiet, intelligent reset.",
       items: [
-        { title: "Sleep that resets",                                    body: "Usually inside the first three nights." },
-        { title: "Looser hips, looser shoulders, better balance",        body: "Often noticeable by day five." },
-        { title: "A nervous system that has stopped running ahead",      body: "Calmer mornings, a longer fuse." },
-        { title: "Habits that survive the flight home",                   body: "Five minutes of mobility, ten minutes of breath, a walking pace they enjoy." },
-        { title: "A take-home book of recipes, playlists and routines",   body: "Designed for their kitchen, not ours." },
-      ],
-      forIntro: "This retreat is for parents 50–70 who are:",
-      forItems: [
-        "Still active, still curious.",
-        "Comfortable on a twenty-minute walk (everything else scales).",
-        "Quietly tired of being the one who takes care of everyone else.",
-        "The kind of person who would never book this for themselves.",
+        { title: "No violence against yourself",      body: "Every practice scales. Nothing is heroic, nothing is rushed." },
+        { title: "Through comfort and recovery",       body: "The body recalibrates when it stops being pushed against." },
+        { title: "Ease, every day after",              body: "Habits you actually keep — not a sprint you survive once." },
       ],
     },
 
-    midCta: {
-      eyebrow: "Seven days · all-inclusive · from $5,000",
-      headline: "A small cohort, a quiet week, a gift that lasts.",
-      buttonLabel: "Request an invitation",
-    },
-
-    day: {
-      heading: "A day at Nuanu",
-      intro: "Days flex. The body, not the clock, sets the pace. One illustrative shape, held gently.",
-      moments: [
-        { time: "06:30", title: "Wake gently",            body: "Tea on the verandah, a slow walk on the beach as the light comes up.",                   palette: ["#1f2218","#3c4530","#7a8265","#c7c5a8"], cap: "06:30 · verandah · sunrise · tea pot",                 image: null },
-        { time: "08:00", title: "Mobility & breath",       body: "Open-air deck, coach-led, never more than ten on the mat.",                              palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "08:00 · open-air movement deck · jungle behind",       image: "/images/pillar-move.png" },
-        { time: "09:00", title: "Slow breakfast",          body: "Garden seating, table-style, no rush.",                                                   palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "09:00 · garden breakfast · plates and bowls",          image: null },
-        { time: "10:30", title: "Free",                    body: "Lumeira spa, sound dome, or the pool — your parent's call, not yours.",                  palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "10:30 · spa pavilion · linen drapes · soft light",     image: "/images/pillar-rest.png" },
-        { time: "12:30", title: "Long lunch",              body: "Plant-forward, Mediterranean-Bali plating, served at the cohort table.",                 palette: ["#2a1f17","#6f4f33","#b08461","#ecd0a8"], cap: "12:30 · long lunch table · shared dishes",             image: null },
-        { time: "14:00", title: "Villa massage",           body: "Or quiet rest. By day three, the body asks for one of these without being prompted.",    palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "14:00 · massage table · folded linen · candle",        image: "/images/pillar-restore.png" },
-        { time: "16:00", title: "Strength & posture",       body: "Gentle, group of ten, focused on balance and ease — the things that matter at sixty.",  palette: ["#1f2a18","#3a4b2c","#7a8c5a","#c8d1aa"], cap: "16:00 · pavilion · standing balance work",             image: null },
-        { time: "17:30", title: "Sunset meditation",        body: "On the deck, facing the ocean. Twenty minutes that recalibrate the week.",              palette: ["#2a1f17","#6f4f33","#b0875a","#e6ceaa"], cap: "17:30 · sunset deck · facing the ocean",               image: null },
-        { time: "19:00", title: "Dinner together",          body: "Cohort table, shared dishes, candles, no phones.",                                       palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "19:00 · cohort dinner · blue hour · candles",          image: "/images/pillar-connect.png" },
-        { time: "20:30", title: "Sound healing",            body: "Or a quiet read by the pool. Bed early — by day four, that is the request, not the rule.", palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "20:30 · sound bowls · low light · spa floor",           image: null },
+    // 6-image gallery (Kamalaya 3×3 trimmed)
+    gallery: {
+      eyebrow: "03 · Inside the week",
+      images: [
+        { palette: ["#2c382c","#5b6049","#a18960","#dec19a"], cap: "open-air movement deck",      image: "/images/pillar-move.png",    alt: "Open-air teak movement deck, palm canopy beyond." },
+        { palette: ["#2a1f17","#6f4f33","#b0875a","#e6ceaa"], cap: "lumeira spa · sound bowls",   image: "/images/pillar-rest.png",    alt: "Brass singing bowls on linen at Lumeira spa." },
+        { palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "massage table · folded linen", image: "/images/pillar-restore.png", alt: "Massage table at Lumeira spa, soft natural light." },
+        { palette: ["#1d2b29","#2f4a44","#6e8a82","#c3d0c8"], cap: "cohort dinner · blue hour",   image: "/images/pillar-connect.png", alt: "Cohort dinner table at blue hour, shared dishes." },
+        { palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "pool lounger · jungle view",   image: null, alt: "An empty teak pool lounger at the edge of the campus pool, jungle view beyond, no people, premium editorial." },
+        { palette: ["#241a13","#5a3f2a","#a78057","#e5cba2"], cap: "spa interior · soft light",    image: null, alt: "A quiet spa interior at Nuanu, natural stone and teak, soft afternoon light, no people, premium editorial." },
       ],
     },
 
-    whyNuanu: {
-      heading: "Why Nuanu",
-      intro: "Nuanu Creative City is a 44-hectare campus on Bali's west coast — wellness pavilions, jungle trails, dunes and sunset beach in one walkable village. A non-clinical setting, on purpose. No machines, no devices, no white walls. A retreat, not a clinic.",
-      points: [
-        { title: "Lumeira Wellness",                            body: "A full spa pavilion: massage, hydrotherapy, sound dome, ritual treatments. Daily access for every guest." },
-        { title: "Open-air movement studios",                    body: "Teak decks for mobility, yoga, posture and balance work — shaded, unhurried, never crowded." },
-        { title: "Bali-grown, Mediterranean-inspired food",       body: "Three meals a day, plant-forward, every dietary need quietly handled. Served table-style." },
-        { title: "Private single-storey villas",                  body: "Step-free where it matters, quiet at night, with a verandah for the morning tea ritual." },
-        { title: "A cohort of ten, never more",                  body: "By day two, the guides, therapists and host team know every guest by name." },
-        { title: "One walkable campus",                           body: "No minibus transfers between activities. Beach, jungle, spa and movement deck are minutes apart." },
-      ],
+    // 3 pillars — Body / Sleep & Energy / Mind (SHA Specialized-packs style)
+    pillarsBlock: {
+      eyebrow: "04 · Three pillars of restoration",
+      headline: "Body. Sleep. Mind.",
+      intro: "Three quiet inputs, held across the whole week. Each one scales — none of them asks anything heroic of the body.",
     },
-
-    faq: {
-      heading: "Questions",
-      intro: "Short answers to what gift-buyers ask us most.",
-      items: [
-        { q: "Is this medical?",                          a: "No. No diagnostics, no protocols, no resident doctor on call. A wellness retreat designed for active adults." },
-        { q: "What if my parent is shy in groups?",        a: "Cohort caps at ten and every activity is opt-in. Many guests arrive on their own and leave with a small circle." },
-        { q: "Can two parents come together?",             a: "Yes. Companion pricing is available on request — they share a villa, attend the same programme." },
-        { q: "What is the fitness floor?",                  a: "Comfortable walking for twenty minutes. Everything else scales — every class has a gentler option." },
-        { q: "Where exactly is Nuanu?",                     a: "Tabanan, on the west coast of Bali — about ninety minutes from Denpasar (DPS) airport. Pickup included." },
-        { q: "When do cohorts run?",                         a: "Monthly. Next available dates are shared on application." },
-        { q: "Can I get daily updates while they are there?", a: "Yes. A short photo and note from the host team, sent on WhatsApp once a day, on request." },
-      ],
-    },
-
-    closing: {
-      line: "More healthy years together.",
-      sub: "Seven days. From $5,000. Cohorts running monthly.",
-      buttonLabel: "Request an invitation",
-    },
-
-
     pillars: [
       {
-        title: "Move",
-        cadence: "Days 1 — 7",
-        body: "Daily guided sessions at human pace. Never more than ten people on the mat.",
-        image: "/images/pillar-move.png",
-        imageAlt: "A woman in her early sixties, silver hair pulled back, mid-stretch on a woven rattan mat in an open-air teak pavilion at Nuanu Creative City, mid-morning side light, palm canopy beyond.",
-        imageCaption: "pillar · move · pavilion · mat · morning light",
+        title: "Body",
+        cadence: "Mobility & strength",
+        body: "Regain ease of movement. Joint mobility, balance, gentle strength — built around the body you have, not the one you used to.",
+        items: ["Joint gym", "Nordic walking", "Pilates 60+", "Water therapy", "Daily mobility"],
+        image: null,
         imagePalette: ["#2c382c", "#5b6049", "#a18960", "#dec19a"],
-        items: [
-          "Mobility classes",
-          "Stretching",
-          "Joint mobility training",
-          "Balance training",
-          "Gentle strength training",
-          "Walking routines",
-          "Breathwork & posture training",
-        ],
+        imageCaption: "pillar · body · mobility",
       },
       {
-        title: "Rest",
-        cadence: "Throughout",
-        body: "Sound healing, breathwork and nervous system regulation. Sleep hygiene built into every day.",
-        image: "/images/pillar-rest.png",
-        imageAlt: "Three brass Tibetan singing bowls on a folded cream linen cloth, a wooden mallet beside them and a single beeswax candle burning low, frangipani blossom near the largest bowl, polished spa floor.",
-        imageCaption: "pillar · rest · singing bowls · candle · spa floor",
+        title: "Sleep & energy",
+        cadence: "Restoration",
+        body: "Sleep that resets, days that no longer drag. Nervous system regulation, sleep hygiene, breath — the quiet inputs.",
+        items: ["Sleep diagnostics", "Relaxation techniques", "Nervous system work", "Evening breathwork", "Sound healing"],
+        image: null,
         imagePalette: ["#2a1f17", "#6f4f33", "#b0875a", "#e6ceaa"],
-        items: [
-          "Sound healing",
-          "Evening breathwork",
-          "Sunset meditation",
-          "Sleep hygiene programme",
-        ],
+        imageCaption: "pillar · sleep · sound bowls",
       },
       {
-        title: "Restore",
-        cadence: "Throughout",
-        body: "Massage, spa and Nuanu campus activations. Your nervous system reorganises around the slower tempo.",
-        image: "/images/pillar-restore.png",
-        imageAlt: "Practitioner's hands working a slow stroke down a guest's relaxed forearm on a white-draped massage table at Lumeira spa, a frangipani branch in a stone vessel softly out of focus on the right.",
-        imageCaption: "pillar · restore · massage hands · lumeira spa",
-        imagePalette: ["#22180f", "#4d3621", "#9a754c", "#e3c89b"],
-        items: [
-          "Daily villa massage",
-          "Lumeira spa rituals",
-          "Nuanu campus activations",
-        ],
-      },
-      {
-        title: "Connect",
-        cadence: "Throughout",
-        body: "Group dinners, excursions and evening gatherings. A small cohort, real connection, someone always nearby.",
-        image: "/images/pillar-connect.png",
-        imageAlt: "A long teak dinner table set for eight at blue hour, plant-forward sharing dishes mid-meal, three lit beeswax candles down the centre, hands at the edges reaching for plates, palm silhouettes against a deep teal sky beyond the pavilion eaves.",
-        imageCaption: "pillar · connect · cohort dinner · blue hour",
-        imagePalette: ["#1d2b29", "#2f4a44", "#6e8a82", "#c3d0c8"],
-        items: [
-          "Cohort dinners",
-          "Campus excursions",
-          "Evening gatherings",
-        ],
+        title: "Mind",
+        cadence: "Clarity",
+        body: "Clearer days, calmer mornings, a longer fuse. The mind catches up with the slower tempo of the week.",
+        items: ["Neuro exercises", "Breathing practices", "Stress management", "Sunset meditation", "30-day habit plan"],
+        image: null,
+        imagePalette: ["#1d2b29", "#345049", "#7a948a", "#d3d6cf"],
+        imageCaption: "pillar · mind · sunset meditation",
       },
     ],
 
+    // 7-day program (SHA-style 3-col services grid)
+    program: {
+      eyebrow: "05 · Your 7-day programme",
+      headline: "Everything is built around comfort and recovery.",
+      intro: "Private room accommodation, three meals a day, all treatments and classes included. Additional services are optional. There is no pressure to do everything.",
+      columns: [
+        {
+          title: "Body care",
+          items: [
+            "7 massages — across the week",
+            "Joint gym — daily",
+            "Hydrothermal complex — daily access",
+            "Kinesiology consultation — once",
+          ],
+        },
+        {
+          title: "Diagnostics & nutrition",
+          items: [
+            "Blood panel — on arrival",
+            "Nutritionist consultation — once",
+            "Personal meal plan — take home",
+            "Glucose-aware menu — every day",
+          ],
+        },
+        {
+          title: "Mind restoration",
+          items: [
+            "Meditations — daily",
+            "Breathing practices — daily",
+            "Sound healing — twice in the week",
+            "30-day habit plan — take home",
+          ],
+        },
+      ],
+    },
+
+    // How you'll feel on day 8 (image+text split)
+    day8: {
+      eyebrow: "06 · How you will feel on day 8",
+      headline: "Your body obeys. Your back doesn't ache. Your energy lasts until evening.",
+      body: "Wake up on the morning after the retreat and notice the difference. You don't have to think about every step. The day is not a negotiation with your back. You look in the mirror and see a well-rested, confident person — and a plan that lives on past the flight home.",
+      imageAlt: "An elegant guest in their early sixties in a soft spa robe sits on a private verandah with a porcelain teacup. Morning jungle light, premium editorial composition, relaxed posture.",
+      imageCaption: "day 8 · verandah · tea · jungle light",
+      imagePalette: ["#22180f", "#4d3621", "#9a754c", "#e3c89b"],
+      image: null,
+    },
+
+    // Where the retreat takes place
+    place: {
+      eyebrow: "07 · Where the retreat takes place",
+      headline: "Nuanu Creative City — a living ecosystem.",
+      intro: "Not a resort. A 44-hectare creative campus on Bali's west coast where nature, culture and innovation share one walkable village.",
+      metrics: [
+        { value: "70%",    label: "Green space across the campus" },
+        { value: "15,000", label: "Trees planted to date" },
+        { value: "94.8%",  label: "Waste recycled on-site" },
+        { value: "100%",   label: "Own water treatment system" },
+      ],
+      nearby: {
+        title: "Nearby",
+        items: [
+          "Tanah Lot temple — 15 minutes",
+          "Rice terraces — minutes from the gate",
+          "Canggu — 20 minutes",
+          "Denpasar (DPS) airport — 60 minutes, pickup included",
+        ],
+      },
+      images: [
+        { palette: ["#2c382c","#5b6049","#a18960","#dec19a"], cap: "nuanu campus · golden hour", image: null, alt: "Wide view of Nuanu Creative City at golden hour, organic modern architecture, tropical landscape, no people." },
+        { palette: ["#1e2a30","#3a5764","#7d9aa5","#d2dadd"], cap: "pool · ocean horizon",        image: null, alt: "Empty teak pool deck with an ocean horizon line, soft afternoon light." },
+        { palette: ["#22180f","#4d3621","#9a754c","#e3c89b"], cap: "spa hall · natural materials", image: null, alt: "Quiet spa hall at Nuanu, natural stone and teak, candle, no people." },
+      ],
+    },
+
+    // Investment — simple Kamalaya-style price card
     investment: {
+      eyebrow: "08 · Price and participation",
+      headline: "One price. All inclusive. No pressure.",
       price: "$5,000",
-      priceUnit: "per guest · seven days",
-      duration: "Seven days, all-inclusive",
-      cohort: "Up to 10 guests · application only",
+      priceUnit: "per guest · 7 days · all inclusive",
+      duration: "Private room. Three meals a day. All treatments and classes from the programme.",
+      cohort: "Up to 12 guests · application only",
+      ctaLabel: "Reserve your spot",
+      note: "For upcoming retreat dates, please contact us. We answer every message within five working days.",
       included: [
-        "Seven nights, private villa accommodation",
-        "All meals, plant-forward, glucose-aware",
-        "Daily guided movement at human pace",
-        "Sound healing, breathwork and meditation",
-        "Daily villa massage and Lumeira spa rituals",
-        "Cohort dinners and campus excursions",
+        "Seven nights, private room",
+        "Three meals a day — plant-forward, glucose-aware",
+        "All treatments, classes and consultations listed above",
         "Airport transfer from Denpasar (DPS)",
       ],
       notIncluded: [
         "Flights to and from Denpasar (DPS)",
         "Travel insurance",
-        "Specialist add-ons",
+        "Optional add-on services beyond the standard programme",
         "Companion accommodation (available, priced separately)",
         "Gratuities (genuinely optional)",
       ],
+    },
+
+    // FAQ — questions from the wireframe brief
+    faq: {
+      heading: "Frequently asked questions",
+      intro: "Short answers to what guests ask us most before they book.",
+      items: [
+        { q: "I've never exercised before. Will this suit me?", a: "Yes. Every practice is adapted for any fitness level — the only thing that matters is your willingness to show up. Everything else scales." },
+        { q: "Can I come with my partner?",                     a: "Yes. A private room for couples is available. The programme is shared, with personal adjustments where you want them." },
+        { q: "What will I take home after the retreat?",         a: "A personal nutrition and movement plan, a 30-day habit plan, access to a private support chat for thirty days, and the new habits themselves." },
+        { q: "Do I need a visa?",                                a: "Visa requirements depend on your nationality. We send full information and instructions after booking — guests from all over the world are welcome." },
+        { q: "What is the fitness floor?",                        a: "Comfortable walking for twenty minutes. Every class has a gentler option. Nothing is heroic." },
+      ],
+    },
+
+    closing: {
+      line: "You deserve a week just for yourself.",
+      sub: "Your whole life you have cared for others. Now it is time to care for your own vitality.",
+      buttonLabel: "Book the retreat",
     },
   },
 };

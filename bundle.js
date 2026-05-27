@@ -814,6 +814,9 @@ function Footer() {
 }
 Object.assign(window, { TakeHome, DayInFourteen, Team, Investment, Apply, Footer });
 function WellnessHero({ v }) {
+  const primaryLabel = v.heroPrimaryCtaLabel || "Request an invitation";
+  const secondaryLabel = v.heroSecondaryCtaLabel || "See the seven-day concept";
+  const secondaryHref = v.heroSecondaryHref || "#concept";
   return /* @__PURE__ */ React.createElement("header", { id: "top", className: "relative w-full", style: { height: "min(92vh, 920px)" } }, /* @__PURE__ */ React.createElement(
     window.PhotoPlaceholder,
     {
@@ -824,21 +827,61 @@ function WellnessHero({ v }) {
       className: "absolute inset-0",
       captionPosition: "tl"
     }
-  ), /* @__PURE__ */ React.createElement("div", { className: "relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 pt-28 pb-16 flex flex-col justify-end" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-[920px] text-white" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase opacity-85 mb-6" }, v.audience, " \xB7 ", v.audienceNote), /* @__PURE__ */ React.createElement("h1", { className: "font-display text-[44px] md:text-[64px] lg:text-[76px] leading-[1.02] tracking-[-0.025em]" }, v.h1), /* @__PURE__ */ React.createElement("p", { className: "mt-7 max-w-[680px] text-[16px] md:text-[17px] leading-[1.55] text-white/90" }, v.sub), /* @__PURE__ */ React.createElement("div", { className: "mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] tracking-[0.22em] uppercase text-white/85" }, v.trustStrip.map((t, i) => /* @__PURE__ */ React.createElement(React.Fragment, { key: i }, i > 0 && /* @__PURE__ */ React.createElement("span", { className: "opacity-50" }, "\xB7"), /* @__PURE__ */ React.createElement("span", null, t)))), /* @__PURE__ */ React.createElement("div", { className: "mt-10 flex flex-wrap items-center gap-5" }, /* @__PURE__ */ React.createElement("a", { href: "#apply", className: "btn-primary-on-dark" }, "Request an invitation"), /* @__PURE__ */ React.createElement("a", { href: "#concept", className: "btn-ghost-on-dark group" }, /* @__PURE__ */ React.createElement("span", null, "See the seven-day concept"), /* @__PURE__ */ React.createElement(window.Icon.Arrow, { className: "transition-transform group-hover:translate-x-1" }))))));
+  ), /* @__PURE__ */ React.createElement("div", { className: "relative z-10 h-full mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 pt-28 pb-16 flex flex-col justify-end" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-[920px] text-white" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase opacity-85 mb-6" }, v.audience, " \xB7 ", v.audienceNote), /* @__PURE__ */ React.createElement("h1", { className: "font-display text-[44px] md:text-[64px] lg:text-[76px] leading-[1.02] tracking-[-0.025em]" }, v.h1), /* @__PURE__ */ React.createElement("p", { className: "mt-7 max-w-[680px] text-[16px] md:text-[17px] leading-[1.55] text-white/90" }, v.sub), /* @__PURE__ */ React.createElement("div", { className: "mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-[10px] tracking-[0.22em] uppercase text-white/85" }, v.trustStrip.map((t, i) => /* @__PURE__ */ React.createElement(React.Fragment, { key: i }, i > 0 && /* @__PURE__ */ React.createElement("span", { className: "opacity-50" }, "\xB7"), /* @__PURE__ */ React.createElement("span", null, t)))), /* @__PURE__ */ React.createElement("div", { className: "mt-10 flex flex-wrap items-center gap-5" }, /* @__PURE__ */ React.createElement("a", { href: "#apply", className: "btn-primary-on-dark" }, primaryLabel), /* @__PURE__ */ React.createElement("a", { href: secondaryHref, className: "btn-ghost-on-dark group" }, /* @__PURE__ */ React.createElement("span", null, secondaryLabel), /* @__PURE__ */ React.createElement(window.Icon.Arrow, { className: "transition-transform group-hover:translate-x-1" }))))));
 }
-function WellnessPremise({ v }) {
-  return /* @__PURE__ */ React.createElement("section", { className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-44" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-10" }, "01 \xB7 The premise")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement(
-    "p",
+function WellnessIntro3Col({ v }) {
+  const i = v.intro3Col;
+  if (!i) return null;
+  const cols = i.cols || [];
+  return /* @__PURE__ */ React.createElement("section", { id: "intro", className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-28 md:py-36" }, i.eyebrow && /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-12" }, i.eyebrow)), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 border-t border-[var(--ink)]/15 pt-12 md:pt-16" }, cols.map((c, idx) => /* @__PURE__ */ React.createElement(window.Reveal, { key: c.title, delay: idx * 60 }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--ink)]/55 mb-6" }, c.title), /* @__PURE__ */ React.createElement("ul", { className: "space-y-3" }, (c.items || []).map((line) => /* @__PURE__ */ React.createElement(
+    "li",
     {
-      className: "font-display text-[32px] md:text-[44px] lg:text-[52px] leading-[1.15] tracking-[-0.02em] text-[var(--ink)] max-w-[1200px]",
+      key: line,
+      className: "flex gap-3 font-body text-[15px] leading-[1.55] text-[var(--ink)]/90"
+    },
+    /* @__PURE__ */ React.createElement(
+      "span",
+      {
+        "aria-hidden": "true",
+        className: "font-mono text-[10px] tracking-[0.22em] text-[var(--green)] mt-[3px]"
+      },
+      "+"
+    ),
+    /* @__PURE__ */ React.createElement("span", null, line)
+  ))))))), i.footnote && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 180 }, /* @__PURE__ */ React.createElement("p", { className: "mt-14 font-body italic text-[14px] leading-[1.65] text-[var(--ink)]/65 max-w-[820px]" }, i.footnote)), i.cta && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 240 }, /* @__PURE__ */ React.createElement("div", { className: "mt-12" }, /* @__PURE__ */ React.createElement("a", { href: i.cta.href || "#apply", className: "btn-primary" }, i.cta.label)))));
+}
+function WellnessPrinciples({ v }) {
+  const p = v.principles;
+  if (!p) return null;
+  const items = p.items || [];
+  return /* @__PURE__ */ React.createElement("section", { className: "bg-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-10 md:gap-14" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-5" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-6" }, p.eyebrow)), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement(
+    "h2",
+    {
+      className: "font-display text-[36px] md:text-[48px] lg:text-[56px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)]",
       style: { textWrap: "balance" }
     },
-    v.premise
-  ))));
+    p.headline
+  ))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120, className: "col-span-12 md:col-span-7 md:pt-6" }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[16px] md:text-[17px] leading-[1.7] text-[var(--ink)]/85 max-w-[640px]" }, p.body))), /* @__PURE__ */ React.createElement("div", { className: "mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8" }, items.map((it, idx) => /* @__PURE__ */ React.createElement(window.Reveal, { key: it.title, delay: idx * 60 }, /* @__PURE__ */ React.createElement("article", { className: "vessel-card h-full" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/50 mb-6" }, String(idx + 1).padStart(2, "0"), " / ", String(items.length).padStart(2, "0")), /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[24px] md:text-[26px] tracking-[-0.015em] text-[var(--green)] leading-[1.2]" }, it.title), /* @__PURE__ */ React.createElement("p", { className: "mt-3 font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/85" }, it.body)))))));
+}
+function WellnessGallery({ v }) {
+  const g = v.gallery;
+  if (!g) return null;
+  const images = g.images || [];
+  return /* @__PURE__ */ React.createElement("section", { className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-24 md:py-32" }, g.eyebrow && /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-10" }, g.eyebrow)), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4" }, images.map((img, idx) => /* @__PURE__ */ React.createElement(window.Reveal, { key: img.cap + idx, delay: idx % 3 * 60 }, /* @__PURE__ */ React.createElement(
+    window.PhotoPlaceholder,
+    {
+      palette: img.palette,
+      caption: img.cap,
+      alt: img.alt || img.cap,
+      image: img.image,
+      className: "aspect-square"
+    }
+  ))))));
 }
 function WellnessConcept({ v }) {
   const pillars = v.pillars || [];
-  return /* @__PURE__ */ React.createElement("section", { id: "concept", className: "bg-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-end justify-between flex-wrap gap-y-6 mb-16 md:mb-24" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "03 \xB7 The seven-day shape"), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, "Four shapes, held across one week."))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[360px]" }, "Move, rest, restore, connect. Each shape has its own tempo, and none of them ask anything heroic of the body."))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" }, pillars.map((p, i) => /* @__PURE__ */ React.createElement(window.Reveal, { key: p.title, delay: i % 2 * 60 }, /* @__PURE__ */ React.createElement("article", { className: "vessel-card !p-0 overflow-hidden h-full flex flex-col" }, p.image && /* @__PURE__ */ React.createElement(
+  const pb = v.pillarsBlock || {};
+  return /* @__PURE__ */ React.createElement("section", { id: "concept", className: "bg-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-end justify-between flex-wrap gap-y-6 mb-16 md:mb-24" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, pb.eyebrow || "Three pillars"), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, pb.headline || "Three quiet inputs."))), pb.intro && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[360px]" }, pb.intro))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8" }, pillars.map((p, i) => /* @__PURE__ */ React.createElement(window.Reveal, { key: p.title, delay: i % 3 * 60 }, /* @__PURE__ */ React.createElement("article", { className: "vessel-card !p-0 overflow-hidden h-full flex flex-col" }, p.image && /* @__PURE__ */ React.createElement(
     window.PhotoPlaceholder,
     {
       palette: p.imagePalette,
@@ -847,7 +890,7 @@ function WellnessConcept({ v }) {
       image: p.image,
       className: "aspect-[4/3]"
     }
-  ), /* @__PURE__ */ React.createElement("div", { className: "p-7 md:p-9 flex flex-col flex-1" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-start justify-between mb-6" }, /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[34px] md:text-[40px] tracking-[-0.02em] text-[var(--green)]" }, p.title), /* @__PURE__ */ React.createElement("span", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55" }, String(i + 1).padStart(2, "0"), " / ", String(pillars.length).padStart(2, "0"))), /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60" }, p.cadence), /* @__PURE__ */ React.createElement("p", { className: "mt-3 font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/85" }, p.body), /* @__PURE__ */ React.createElement("ul", { className: "mt-6 border-t border-[var(--ink)]/15" }, p.items.map((l) => /* @__PURE__ */ React.createElement(
+  ), /* @__PURE__ */ React.createElement("div", { className: "p-7 md:p-9 flex flex-col flex-1" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-start justify-between mb-6" }, /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[34px] md:text-[40px] tracking-[-0.02em] text-[var(--green)]" }, p.title), /* @__PURE__ */ React.createElement("span", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55" }, String(i + 1).padStart(2, "0"), " / ", String(pillars.length).padStart(2, "0"))), p.cadence && /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60" }, p.cadence), /* @__PURE__ */ React.createElement("p", { className: "mt-3 font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/85" }, p.body), /* @__PURE__ */ React.createElement("ul", { className: "mt-6 border-t border-[var(--ink)]/15" }, p.items.map((l) => /* @__PURE__ */ React.createElement(
     "li",
     {
       key: l,
@@ -857,11 +900,85 @@ function WellnessConcept({ v }) {
     /* @__PURE__ */ React.createElement("span", { className: "font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--ink)]/45" }, "included")
   ))))))))));
 }
+function WellnessProgram({ v }) {
+  const pr = v.program;
+  if (!pr) return null;
+  const columns = pr.columns || [];
+  return /* @__PURE__ */ React.createElement("section", { id: "programme", className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-end justify-between flex-wrap gap-y-6 mb-16 md:mb-20" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, pr.eyebrow), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, pr.headline))), pr.intro && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[400px]" }, pr.intro))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-3 border-t border-[var(--ink)]/15" }, columns.map((c, idx) => /* @__PURE__ */ React.createElement(window.Reveal, { key: c.title, delay: idx * 60, className: idx > 0 ? "md:border-l md:border-[var(--ink)]/15" : "" }, /* @__PURE__ */ React.createElement("div", { className: "py-10 md:py-12 md:px-8 lg:px-10" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55 mb-2" }, String(idx + 1).padStart(2, "0"), " / ", String(columns.length).padStart(2, "0")), /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[26px] md:text-[30px] tracking-[-0.015em] text-[var(--green)] leading-[1.2]" }, c.title), /* @__PURE__ */ React.createElement("ul", { className: "mt-6 space-y-3" }, (c.items || []).map((line) => /* @__PURE__ */ React.createElement(
+    "li",
+    {
+      key: line,
+      className: "flex gap-3 font-body text-[14.5px] leading-[1.55] text-[var(--ink)]/85"
+    },
+    /* @__PURE__ */ React.createElement(
+      "span",
+      {
+        "aria-hidden": "true",
+        className: "font-mono text-[10px] tracking-[0.22em] text-[var(--green)] mt-[3px]"
+      },
+      "+"
+    ),
+    /* @__PURE__ */ React.createElement("span", null, line)
+  )))))))));
+}
+function WellnessDay8({ v }) {
+  const d = v.day8;
+  if (!d) return null;
+  return /* @__PURE__ */ React.createElement("section", { className: "bg-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-8 md:gap-12 items-center" }, /* @__PURE__ */ React.createElement(window.Reveal, { className: "col-span-12 md:col-span-6" }, /* @__PURE__ */ React.createElement(
+    window.PhotoPlaceholder,
+    {
+      palette: d.imagePalette,
+      caption: d.imageCaption,
+      alt: d.imageAlt,
+      image: d.image,
+      className: "aspect-[4/5] rounded-[24px]"
+    }
+  )), /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-6 md:pl-6" }, /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-6" }, d.eyebrow)), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120 }, /* @__PURE__ */ React.createElement(
+    "h2",
+    {
+      className: "font-display text-[34px] md:text-[44px] lg:text-[52px] leading-[1.1] tracking-[-0.02em] text-[var(--ink)]",
+      style: { textWrap: "balance" }
+    },
+    d.headline
+  )), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 180 }, /* @__PURE__ */ React.createElement("p", { className: "mt-8 font-body text-[16px] leading-[1.7] text-[var(--ink)]/85 max-w-[560px]" }, d.body))))));
+}
+function WellnessPlace({ v }) {
+  const p = v.place;
+  if (!p) return null;
+  const metrics = p.metrics || [];
+  const nearby = p.nearby;
+  const images = p.images || [];
+  return /* @__PURE__ */ React.createElement("section", { id: "place", className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-10 mb-16 md:mb-20" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-5" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, p.eyebrow)), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[480px]" }, p.headline))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120, className: "col-span-12 md:col-span-7 md:pt-4" }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[16px] md:text-[17px] leading-[1.7] text-[var(--ink)]/85 max-w-[640px]" }, p.intro))), metrics.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 border-t border-b border-[var(--ink)]/15 py-12 md:py-16 mb-16 md:mb-20" }, metrics.map((m, idx) => /* @__PURE__ */ React.createElement(window.Reveal, { key: m.label, delay: idx * 60 }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-display text-[44px] md:text-[56px] lg:text-[64px] leading-none tracking-[-0.03em] text-[var(--green)]" }, m.value), /* @__PURE__ */ React.createElement("p", { className: "mt-4 font-body text-[13px] leading-[1.55] text-[var(--ink)]/75 max-w-[220px]" }, m.label))))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-6 md:gap-10" }, images.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-8 grid grid-cols-3 gap-3 md:gap-4" }, images.map((img, idx) => /* @__PURE__ */ React.createElement(window.Reveal, { key: img.cap + idx, delay: idx * 60 }, /* @__PURE__ */ React.createElement(
+    window.PhotoPlaceholder,
+    {
+      palette: img.palette,
+      caption: img.cap,
+      alt: img.alt || img.cap,
+      image: img.image,
+      className: "aspect-[4/5] rounded-[18px]"
+    }
+  )))), nearby && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120, className: "col-span-12 md:col-span-4 md:pl-6 md:border-l md:border-[var(--ink)]/15" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/55 mb-5" }, nearby.title || "Nearby"), /* @__PURE__ */ React.createElement("ul", { className: "space-y-3" }, (nearby.items || []).map((line) => /* @__PURE__ */ React.createElement(
+    "li",
+    {
+      key: line,
+      className: "flex gap-3 font-body text-[14px] leading-[1.55] text-[var(--ink)]/85"
+    },
+    /* @__PURE__ */ React.createElement(
+      "span",
+      {
+        "aria-hidden": "true",
+        className: "font-mono text-[10px] tracking-[0.22em] text-[var(--green)] mt-[3px]"
+      },
+      "+"
+    ),
+    /* @__PURE__ */ React.createElement("span", null, line)
+  )))))));
+}
 function WellnessInvestment({ v }) {
   const inv = v.investment || {};
   const included = inv.included || [];
   const notIncluded = inv.notIncluded || [];
-  return /* @__PURE__ */ React.createElement("section", { className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "06 \xB7 The investment")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, "One price. All-inclusive. No urgency.")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120 }, /* @__PURE__ */ React.createElement("div", { className: "mt-12 vessel-card bg-[var(--warm)] !p-8 md:!p-12 lg:!p-16" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-x-10 gap-y-10" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4 md:border-r md:border-[var(--ink)]/15 md:pr-10" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60" }, inv.priceUnit || "Per guest \xB7 seven days"), /* @__PURE__ */ React.createElement("div", { className: "mt-3 font-display text-[44px] md:text-[56px] leading-[1.02] tracking-[-0.03em] text-[var(--green)]" }, inv.price), /* @__PURE__ */ React.createElement("p", { className: "mt-5 font-body text-[14px] leading-[1.6] text-[var(--ink)]/80" }, inv.duration), /* @__PURE__ */ React.createElement("div", { className: "mt-8 pt-8 border-t border-[var(--ink)]/15" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60 mb-2" }, "Cohort size"), /* @__PURE__ */ React.createElement("div", { className: "font-display text-[22px] tracking-[-0.01em] text-[var(--ink)]" }, inv.cohort))), /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--green)] mb-5" }, "What is included"), /* @__PURE__ */ React.createElement("ul", { className: "space-y-3" }, included.map((l) => /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("section", { id: "investment", className: "bg-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, inv.eyebrow || "Price and participation")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, inv.headline || "One price. All inclusive. No pressure.")), inv.note && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 90 }, /* @__PURE__ */ React.createElement("p", { className: "mt-6 font-body text-[15px] leading-[1.65] text-[var(--ink)]/75 max-w-[680px]" }, inv.note)), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120 }, /* @__PURE__ */ React.createElement("div", { className: "mt-12 vessel-card bg-white !p-8 md:!p-12 lg:!p-16" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-x-10 gap-y-10" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4 md:border-r md:border-[var(--ink)]/15 md:pr-10" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60" }, inv.priceUnit || "Per guest \xB7 seven days"), /* @__PURE__ */ React.createElement("div", { className: "mt-3 font-display text-[52px] md:text-[64px] leading-[1.02] tracking-[-0.03em] text-[var(--green)]" }, inv.price), /* @__PURE__ */ React.createElement("p", { className: "mt-5 font-body text-[14px] leading-[1.6] text-[var(--ink)]/80" }, inv.duration), /* @__PURE__ */ React.createElement("div", { className: "mt-8 pt-8 border-t border-[var(--ink)]/15" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--ink)]/60 mb-2" }, "Cohort size"), /* @__PURE__ */ React.createElement("div", { className: "font-display text-[22px] tracking-[-0.01em] text-[var(--ink)]" }, inv.cohort)), inv.ctaLabel && /* @__PURE__ */ React.createElement("div", { className: "mt-10" }, /* @__PURE__ */ React.createElement("a", { href: "#apply", className: "btn-primary" }, inv.ctaLabel))), /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--green)] mb-5" }, "What is included"), /* @__PURE__ */ React.createElement("ul", { className: "space-y-3" }, included.map((l) => /* @__PURE__ */ React.createElement(
     "li",
     {
       key: l,
@@ -893,67 +1010,12 @@ function WellnessInvestment({ v }) {
     /* @__PURE__ */ React.createElement("span", null, l)
   )))))))));
 }
-function WellnessOutcomes({ v }) {
-  const o = v.outcomes;
-  if (!o) return null;
-  const items = o.items || [];
-  const forItems = o.forItems || [];
-  return /* @__PURE__ */ React.createElement("section", { className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-end justify-between flex-wrap gap-y-6 mb-16 md:mb-20" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "02 \xB7 What they take home"), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[820px]" }, "The kind of difference the people closest to them notice first."))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[360px]" }, o.intro))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-x-10 gap-y-12" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-7" }, /* @__PURE__ */ React.createElement("ol", { className: "border-t border-[var(--ink)]/15" }, items.map((it, i) => /* @__PURE__ */ React.createElement(window.Reveal, { key: it.title, as: "li", delay: i % 3 * 40 }, /* @__PURE__ */ React.createElement("div", { className: "border-b border-[var(--ink)]/15 py-7 md:py-9 grid grid-cols-12 gap-4 items-baseline" }, /* @__PURE__ */ React.createElement("span", { className: "col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--green)] pt-1" }, String(i + 1).padStart(2, "0")), /* @__PURE__ */ React.createElement("div", { className: "col-span-10 md:col-span-11" }, /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[22px] md:text-[26px] tracking-[-0.015em] text-[var(--ink)] leading-[1.2]" }, it.title), /* @__PURE__ */ React.createElement("p", { className: "mt-2 font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/80 max-w-[640px]" }, it.body))))))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120, className: "col-span-12 md:col-span-5 md:pl-10 md:border-l md:border-[var(--ink)]/15" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--green)] mb-5" }, "Who comes"), /* @__PURE__ */ React.createElement("p", { className: "font-display text-[24px] md:text-[28px] tracking-[-0.015em] text-[var(--ink)] leading-[1.25]" }, o.forIntro), /* @__PURE__ */ React.createElement("ul", { className: "mt-6 space-y-3" }, forItems.map((line) => /* @__PURE__ */ React.createElement(
-    "li",
-    {
-      key: line,
-      className: "flex gap-3 font-body text-[14.5px] leading-[1.6] text-[var(--ink)]/85"
-    },
-    /* @__PURE__ */ React.createElement(
-      "span",
-      {
-        "aria-hidden": "true",
-        className: "font-mono text-[10px] tracking-[0.22em] text-[var(--green)] mt-[3px]"
-      },
-      "+"
-    ),
-    /* @__PURE__ */ React.createElement("span", null, line)
-  )))))));
-}
-function WellnessMidCta({ v }) {
-  const c = v.midCta;
-  if (!c) return null;
-  return /* @__PURE__ */ React.createElement("section", { className: "bg-[var(--green)] text-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-16 md:py-20" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap items-center justify-between gap-y-8 gap-x-10" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-[820px]" }, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--warm)]/70 mb-3" }, c.eyebrow), /* @__PURE__ */ React.createElement(
-    "p",
-    {
-      className: "font-display text-[28px] md:text-[36px] lg:text-[40px] leading-[1.15] tracking-[-0.02em]",
-      style: { textWrap: "balance" }
-    },
-    c.headline
-  )), /* @__PURE__ */ React.createElement("a", { href: "#apply", className: "btn-primary-on-dark" }, c.buttonLabel || "Request an invitation"))));
-}
-function WellnessDay({ v }) {
-  const d = v.day;
-  if (!d) return null;
-  const moments = d.moments || [];
-  return /* @__PURE__ */ React.createElement("section", { id: "day", className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-end justify-between flex-wrap gap-y-6 mb-16 md:mb-20" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "04 \xB7 ", d.heading || "A day at Nuanu"), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[760px]" }, "One illustrative shape, held at human pace."))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[360px]" }, d.intro))), /* @__PURE__ */ React.createElement("ol", { className: "border-t border-[var(--ink)]/15" }, moments.map((m, i) => /* @__PURE__ */ React.createElement(window.Reveal, { key: m.time, as: "li", delay: i % 3 * 40 }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-6 md:gap-10 py-8 md:py-10 border-b border-[var(--ink)]/15 items-start" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-2 font-mono text-[11px] tracking-[0.22em] uppercase text-[var(--green)] pt-2" }, m.time), /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-3" }, /* @__PURE__ */ React.createElement(
-    window.PhotoPlaceholder,
-    {
-      palette: m.palette,
-      caption: m.cap,
-      alt: `${m.time}: ${m.title}. ${m.body}`,
-      image: m.image,
-      className: "aspect-[4/3] rounded-[18px]"
-    }
-  )), /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-7 md:pl-8 md:border-l md:border-[var(--ink)]/15" }, /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[26px] md:text-[32px] tracking-[-0.02em] text-[var(--ink)]" }, m.title), /* @__PURE__ */ React.createElement("p", { className: "mt-3 font-body text-[15px] leading-[1.65] text-[var(--ink)]/80 max-w-[600px]" }, m.body))))))));
-}
-function WellnessWhyNuanu({ v }) {
-  const w = v.whyNuanu;
-  if (!w) return null;
-  const points = w.points || [];
-  return /* @__PURE__ */ React.createElement("section", { id: "why-nuanu", className: "bg-[var(--warm)]" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-end justify-between flex-wrap gap-y-6 mb-16 md:mb-20" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "05 \xB7 ", w.heading || "Why Nuanu"), /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[48px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[900px]" }, "A non-clinical setting, on purpose."))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[420px]" }, w.intro))), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" }, points.map((p, i) => /* @__PURE__ */ React.createElement(window.Reveal, { key: p.title, delay: i % 3 * 60 }, /* @__PURE__ */ React.createElement("article", { className: "vessel-card h-full" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline justify-between mb-6" }, /* @__PURE__ */ React.createElement("h3", { className: "font-display text-[22px] md:text-[24px] tracking-[-0.015em] text-[var(--green)] leading-[1.2]" }, p.title), /* @__PURE__ */ React.createElement("span", { className: "font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--ink)]/45" }, String(i + 1).padStart(2, "0"), " / ", String(points.length).padStart(2, "0"))), /* @__PURE__ */ React.createElement("p", { className: "font-body text-[14.5px] leading-[1.65] text-[var(--ink)]/85" }, p.body)))))));
-}
 function WellnessFAQ({ v }) {
   const f = v.faq;
   if (!f) return null;
   const items = f.items || [];
   const [openIdx, setOpenIdx] = React.useState(0);
-  return /* @__PURE__ */ React.createElement("section", { id: "faq", className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-10" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, "07 \xB7 ", f.heading || "Questions")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[44px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[400px]" }, "Short answers to the things we get asked most.")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120 }, /* @__PURE__ */ React.createElement("p", { className: "mt-6 font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[380px]" }, f.intro))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120, className: "col-span-12 md:col-span-8" }, /* @__PURE__ */ React.createElement("ul", { className: "border-t border-[var(--ink)]/15" }, items.map((it, i) => {
+  return /* @__PURE__ */ React.createElement("section", { id: "faq", className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-40" }, /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-12 gap-10" }, /* @__PURE__ */ React.createElement("div", { className: "col-span-12 md:col-span-4" }, /* @__PURE__ */ React.createElement(window.Reveal, null, /* @__PURE__ */ React.createElement("div", { className: "font-mono text-[10px] tracking-[0.28em] uppercase text-[var(--green)] mb-4" }, f.heading || "Questions")), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 60 }, /* @__PURE__ */ React.createElement("h2", { className: "font-display text-[34px] md:text-[44px] leading-[1.08] tracking-[-0.02em] text-[var(--ink)] max-w-[400px]" }, "Short answers to what guests ask before they book.")), f.intro && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120 }, /* @__PURE__ */ React.createElement("p", { className: "mt-6 font-body text-[14px] leading-[1.6] text-[var(--ink)]/75 max-w-[380px]" }, f.intro))), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 120, className: "col-span-12 md:col-span-8" }, /* @__PURE__ */ React.createElement("ul", { className: "border-t border-[var(--ink)]/15" }, items.map((it, i) => {
     const open = openIdx === i;
     return /* @__PURE__ */ React.createElement("li", { key: it.q, className: "border-b border-[var(--ink)]/15" }, /* @__PURE__ */ React.createElement(
       "button",
@@ -996,23 +1058,44 @@ function WellnessClosing({ v }) {
       style: { textWrap: "balance" }
     },
     c.line
-  )), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 80 }, /* @__PURE__ */ React.createElement("p", { className: "mt-8 font-mono text-[11px] tracking-[0.28em] uppercase text-[var(--warm)]/70" }, c.sub)), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 160 }, /* @__PURE__ */ React.createElement("div", { className: "mt-12" }, /* @__PURE__ */ React.createElement("a", { href: "#apply", className: "btn-primary-on-dark" }, c.buttonLabel || "Request an invitation")))));
+  )), c.sub && /* @__PURE__ */ React.createElement(window.Reveal, { delay: 80 }, /* @__PURE__ */ React.createElement("p", { className: "mt-8 font-body text-[18px] md:text-[20px] leading-[1.6] text-[var(--warm)]/80 max-w-[760px]" }, c.sub)), /* @__PURE__ */ React.createElement(window.Reveal, { delay: 160 }, /* @__PURE__ */ React.createElement("div", { className: "mt-12" }, /* @__PURE__ */ React.createElement("a", { href: "#apply", className: "btn-primary-on-dark" }, c.buttonLabel || "Request an invitation")))));
+}
+function WellnessPremise({ v }) {
+  return /* @__PURE__ */ React.createElement("section", { className: "bg-white" }, /* @__PURE__ */ React.createElement("div", { className: "mx-auto max-w-[1600px] px-6 md:px-10 lg:px-20 py-32 md:py-44" }, /* @__PURE__ */ React.createElement("p", { className: "font-display text-[32px] md:text-[44px] lg:text-[52px] leading-[1.15] tracking-[-0.02em] text-[var(--ink)] max-w-[1200px]", style: { textWrap: "balance" } }, v.premise)));
+}
+function WellnessOutcomes() {
+  return null;
+}
+function WellnessMidCta() {
+  return null;
+}
+function WellnessDay() {
+  return null;
+}
+function WellnessWhyNuanu() {
+  return null;
 }
 function WellnessApp({ v }) {
-  return /* @__PURE__ */ React.createElement("div", { className: "bg-white text-[var(--ink)]" }, /* @__PURE__ */ React.createElement(window.Nav, null), /* @__PURE__ */ React.createElement(WellnessHero, { v }), /* @__PURE__ */ React.createElement(WellnessPremise, { v }), /* @__PURE__ */ React.createElement(WellnessOutcomes, { v }), /* @__PURE__ */ React.createElement(WellnessMidCta, { v }), /* @__PURE__ */ React.createElement(WellnessConcept, { v }), /* @__PURE__ */ React.createElement(WellnessDay, { v }), /* @__PURE__ */ React.createElement(WellnessWhyNuanu, { v }), /* @__PURE__ */ React.createElement(WellnessInvestment, { v }), /* @__PURE__ */ React.createElement(WellnessFAQ, { v }), /* @__PURE__ */ React.createElement(window.Apply, { v }), /* @__PURE__ */ React.createElement(WellnessClosing, { v }), /* @__PURE__ */ React.createElement(window.Footer, null));
+  return /* @__PURE__ */ React.createElement("div", { className: "bg-white text-[var(--ink)]" }, /* @__PURE__ */ React.createElement(window.Nav, null), /* @__PURE__ */ React.createElement(WellnessHero, { v }), /* @__PURE__ */ React.createElement(WellnessIntro3Col, { v }), /* @__PURE__ */ React.createElement(WellnessPrinciples, { v }), /* @__PURE__ */ React.createElement(WellnessGallery, { v }), /* @__PURE__ */ React.createElement(WellnessConcept, { v }), /* @__PURE__ */ React.createElement(WellnessProgram, { v }), /* @__PURE__ */ React.createElement(WellnessDay8, { v }), /* @__PURE__ */ React.createElement(WellnessPlace, { v }), /* @__PURE__ */ React.createElement(WellnessInvestment, { v }), /* @__PURE__ */ React.createElement(WellnessFAQ, { v }), /* @__PURE__ */ React.createElement(WellnessClosing, { v }), /* @__PURE__ */ React.createElement(window.Apply, { v }), /* @__PURE__ */ React.createElement(window.Footer, null));
 }
 Object.assign(window, {
   WellnessApp,
   WellnessHero,
-  WellnessPremise,
+  WellnessIntro3Col,
+  WellnessPrinciples,
+  WellnessGallery,
   WellnessConcept,
+  WellnessProgram,
+  WellnessDay8,
+  WellnessPlace,
   WellnessInvestment,
+  WellnessFAQ,
+  WellnessClosing,
+  WellnessPremise,
   WellnessOutcomes,
   WellnessMidCta,
   WellnessDay,
-  WellnessWhyNuanu,
-  WellnessFAQ,
-  WellnessClosing
+  WellnessWhyNuanu
 });
 const PATH_TO_VARIANT = {
   "/": "master",
